@@ -1,0 +1,384 @@
+.App {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.main-nav{
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  align-items: center;
+    justify-content: space-between;
+    padding: 1rem 12rem;
+  background-color:#fff;
+}
+
+.contactBtn, form .btn{
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  border: 1px solid #9e9e9e45;
+  background-color: transparent;
+  letter-spacing: 0.2rem;
+  line-height: 1.5rem;
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.contactBtn:hover{
+  border: 1px solid #02C1FD;
+  background-color: transparent;
+  color: black;
+}
+
+.slogan{
+  position: absolute;
+  color: white;
+  z-index: 9999;
+  letter-spacing: 0.2rem;
+  top: 9rem;
+  left: 25rem;
+}
+
+.longdash{
+  width: 5rem;
+  height: 1px;
+  background-color: white;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+.subheader{
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.slogan h2{
+  text-transform: uppercase;
+  width: 55%;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.slideImg{
+  filter: brightness(0.5);
+}
+.navbar-logo{
+  width: 17rem;
+}
+
+.contactBtn img{
+  margin-left: 1rem;
+}
+
+.slogan:hover{
+  color: #02C1FD;
+}
+
+.aboutUs div, .banner div, .formContainer .contactInfo, .formContainer form{
+  width: 45%;
+}
+
+.aboutUs span, .letstalk{
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+}
+
+
+.letstalk{
+  color: #02C1FD;
+}
+
+.aboutUs h3, .aboutUs p{
+  width: 70%;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 800;
+  
+}
+
+.services{
+  padding: 0 10rem;
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.service{
+border: none;
+margin-bottom: 3rem;
+width: 80%;
+padding: 1rem;
+}
+
+.service:hover{
+  cursor: pointer;
+  background-color: rgba(165, 163, 163, 0.096);
+}
+
+.card-text{
+width: 80%;
+font-weight: 500;
+}
+
+.card-title{
+font-weight: 800;
+font-size: 1.8rem;
+}
+
+.serviceImg{
+  width: 30%;
+  padding-left: 1rem;
+}
+
+.banner{
+  background-color: black;
+  color: #fff;
+  padding: 10rem 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link{
+  align-self: center;
+  justify-self: flex-end;
+}
+
+.bannerBtnContainer{
+  align-self: center;
+  margin-right: 5rem;
+}
+
+.bannerBtn{
+background-color: transparent;
+border: 1px solid #BBBBBB;
+    margin-right: 5rem;
+    padding: 1.5rem;
+    border-radius: 0;
+}
+
+.bannerBtn:hover{
+  border: 1px solid #02C1FD;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  transform: scale(1.2);
+}
+
+.formContainer, .aboutUs{
+  display: flex;
+  justify-content: space-between;
+}
+
+.formContainer, .aboutUs{
+  padding:8rem 12rem;
+}
+
+.lfContent h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 8rem;
+}
+.lfContent h2 span{
+  color: black;
+    -webkit-text-stroke-color: #BBBBBB;
+    -webkit-text-stroke-width: thin;
+}
+
+
+.smallText{
+font-size: 1.7rem;
+}
+
+.xsmallText{
+  font-size: 1.2rem;
+}
+
+.xxsmallText{
+  font-size: 0.8rem;
+}
+
+.smallBold{
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: #545457;
+}
+
+
+.contactInfo h5{
+  margin-top: 1rem;
+  font-weight: 800;
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+}
+
+.contactInfo h5 span{
+  color: #01C3FF;
+}
+
+form, .contactBtn{
+  margin-right: 5rem;
+}
+
+.rtSection span {
+  font-weight: 800;
+}
+
+.rtSection p{
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+form{
+  display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+form h3{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-right: 5rem;
+  text-transform: uppercase;
+}
+
+.mb-3, form .btn{
+  width: 100%;
+}
+
+.form-control{
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.scrollUpBtn{
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  align-items: center;
+  transform: rotate(90deg);
+  justify-content: center;
+  background-color: #02C1FD;
+  border: none;
+  left: 85%;
+  display: flex;
+}
+
+
+@media all and (max-width: 800px) {
+  
+  .row{
+    --bs-gutter-x:0;
+  }
+
+  .main-nav{
+      padding: 1rem 2rem;
+  }
+
+  .deviceToggle{
+    display: none
+  }
+
+  .navbar-logo{
+    width: 9rem;
+  }
+
+  .contactBtn{
+    margin-right: 0;
+  }
+
+  .contactBtn img{
+    margin-left: 0;
+  }
+
+  .slideImg{
+    width: 100%;
+  }
+
+  .slogan{
+    top: 7rem;
+    left: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .slogan h2{
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  .subheader{
+    font-size: 1rem;
+  }
+
+  .row{
+    padding: 0;
+  }
+
+  .services, .aboutUs,.formContainer, .banner{
+    padding:1rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutUs{
+    margin-top: 2rem;
+  }
+
+  .aboutUs div, .banner div, .service, .card-text, .lfSection h3, .rtSection p, .formContainer .contactInfo,  .formContainer form{
+    width: 100%;
+  }
+
+  .aboutUs span{
+    font-size: 1rem;
+  }
+  
+  .lfSection h3, .rtSection p{
+    margin-bottom: 3rem;
+  }
+  
+  .services{
+    margin-bottom: 0;
+  }
+
+  .banner{
+    padding: 4rem 1.5rem;
+  }
+
+  .lfContent h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .bannerBtnContainer{
+    margin-right: 0;
+  }
+
+  .bannerBtn{
+    margin-right: 0;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+  }
+
+  .banner .nav-link{
+    align-self: flex-start;
+  }
+
+  .smallText{
+    font-size: 1.5rem;
+  }
+
+  .address{
+    width: 60%;
+  }
+
+  .contactInfo{
+    margin-top: 2rem;
+  }
+
+  }
