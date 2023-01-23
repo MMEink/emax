@@ -1,6 +1,6 @@
 import { Row, Col, Card } from "react-bootstrap";
 
-export default function NavbarView() {
+export default function AboutUsSection() {
   const services = [
     {
       link: "branding",
@@ -46,7 +46,7 @@ export default function NavbarView() {
     },
   ];
   return (
-    <Row>
+    <Row className="aboutusSection">
       <div className="aboutUs" id="aboutUs">
         <div className="lfSection">
           <span className="smallText">

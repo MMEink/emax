@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm";
 import { Row, Button } from "react-bootstrap";
 import { useState } from "react";
 import "./App.css";
+import LogoCarousel from "./LogoCarousel";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -34,6 +35,7 @@ function App() {
       <NavbarView />
       <SwiperSection />
       <AboutUsSection />
+      <LogoCarousel />
       <BlackBanner />
       <ContactForm />
       <Button
