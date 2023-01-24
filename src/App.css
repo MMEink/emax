@@ -1,5 +1,4 @@
 .App {
-  font-family: 'Montserrat', sans-serif;
   width: 100%;
   margin: auto;
   --bs-gutter-x:0
@@ -7,6 +6,61 @@
 
 .row{
   --bs-gutter-x:0;
+}
+
+.pageTitle{
+  z-index: 9999;
+    position: relative;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.bg-overlay{
+  background: transparent url(./images/07.png) center center repeat;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  bottom: 12rem;
+  left: 0rem;
+  top: -8rem;
+}
+
+.arrowContainer {
+  margin-top: 2rem;
+}
+
+.arrowContainer span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrowContainer span:nth-child(2){
+  animation-delay: -0.2s;
+}
+
+.arrowContainer span:nth-child(3){
+  animation-delay: -0.4s;
+}
+
+@keyframes animate{
+0%{
+  opacity: 0;
+  transform: rotate(45deg) translate(-20px, -20px);
+}
+50%{
+  opacity: 1;
+} 
+100%{
+  opacity: 0;
+  transform: rotate(45deg) translate(20px, 20px);
+} 
 }
 
 .require{
@@ -34,7 +88,11 @@ color: red;
   width: 70%;
 }
 
-.contactBtn, form .btn{
+.navBtns{
+  justify-self: flex-end;
+}
+
+.navBtn, form .btn{
   padding: 0.5rem 2rem;
   border-radius: 10px;
   border: 1px solid #9e9e9e45;
@@ -46,7 +104,7 @@ color: red;
   font-weight: 500;
 }
 
-.contactBtn:hover{
+.navBtn:hover{
   border: 1px solid #02C1FD;
   background-color: transparent;
   color: black;
@@ -106,7 +164,7 @@ to{
   width: 17rem;
 }
 
-.contactBtn img{
+.navBtn img{
   margin-left: 1rem;
 }
 
@@ -205,6 +263,7 @@ width: 70%;
 }
 
 .nav-link{
+  display: inline-block;
   align-self: center;
   justify-self: flex-end;
 }
@@ -282,7 +341,7 @@ font-size: 1.7rem;
   color: #01C3FF;
 }
 
-form, .contactBtn{
+form{
   margin-right: 5rem;
 }
 
@@ -349,11 +408,11 @@ form .btn{
     width: 9rem;
   }
 
-  .contactBtn{
+  .navBtn{
     margin-right: 0;
   }
 
-  .contactBtn img{
+  .navBtn img{
     margin-left: 0;
   }
 
@@ -487,7 +546,7 @@ form .btn{
       width:14rem;
   
     }
-    .contactBtn{
+    .navBtn{
       margin-right: 0rem;
     }
   

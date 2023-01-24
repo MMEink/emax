@@ -1,12 +1,18 @@
 import NavbarView from "./Navbar";
-import SwiperSection from "./SwiperSection";
-import AboutUsSection from "./AboutUsSection";
-import BlackBanner from "./BlackBanner";
-import ContactForm from "./ContactForm";
+import MainView from "./MainView/Main";
+import AboutUsView from "./AboutUsView/AboutUsView";
+import OurServicesView from "./OurServicesView/OurServicesView";
+import PortfolioView from "./PortfolioView/PortfolioView";
 import { Row, Button } from "react-bootstrap";
 import { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Routes,
+} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./App.css";
-import LogoCarousel from "./LogoCarousel";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -31,21 +37,26 @@ function App() {
   window.addEventListener("scroll", toggleVisible);
 
   return (
-    <Row className="App">
+    <Router className="App">
       <NavbarView />
-      <SwiperSection />
-      <AboutUsSection />
-      <LogoCarousel />
-      <BlackBanner />
-      <ContactForm />
-      <Button
-        className="scrollUpBtn fixed-bottom"
-        style={{ display: visible ? "flex" : "none" }}
-        onClick={() => onScrollUpClick()}
-      >
-        &#10094;
-      </Button>
-    </Row>
+      <Row>
+        <Routes>
+          <Route path="/">
+            <Route index element={<MainView />}></Route>
+            <Route path="aboutus" element={<AboutUsView />}></Route>
+            <Route path="ourservices" element={<OurServicesView />}></Route>
+            <Route path="portfolio" element={<PortfolioView />}></Route>
+          </Route>
+        </Routes>
+        <Button
+          className="scrollUpBtn fixed-bottom"
+          style={{ display: visible ? "flex" : "none" }}
+          onClick={() => onScrollUpClick()}
+        >
+          &#10094;
+        </Button>
+      </Row>
+    </Router>
   );
 }
 

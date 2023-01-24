@@ -1,0 +1,10 @@
+.bg-overlay{
+    background-image: url("../images/07.png");
+    background-repeat: repeat;
+    opacity: 0.5;
+    width: 1500px;
+    height: 400px;
+    position: absolute;
+    top: 7rem;
+    left: 0rem;
+}

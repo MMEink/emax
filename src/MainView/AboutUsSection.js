@@ -53,13 +53,13 @@ export default function AboutUsSection() {
             KNOW US BETTER
             <hr />
           </span>
-          <h3>We help to create strategies, design & development.</h3>
+          <h3>We help create strategies to market and grow your business.</h3>
         </div>
         <div className="rtSection">
           <p>
-            With over 25 years in the industry we are committed to bringing your
-            brand to life. Our team of experts can help you elevate your
-            business.
+            With over 25 years of marketing experience for the service industry
+            we have the knowledge and skills to bring your brand to life. Our
+            team of experts can help you elevate your business.
           </p>
         </div>
       </div>

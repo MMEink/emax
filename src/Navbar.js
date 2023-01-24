@@ -9,12 +9,20 @@ export default function NavbarView() {
         <Navbar.Brand href="/">
           <img src={logo} alt="logo" className="navbar-logo" />
         </Navbar.Brand>
-        <Nav.Link href="#contact">
-          <Button className="contactBtn">
-            <span className="deviceToggle">CONTACT</span>
-            <img src={plane} alt="planeIcon" />
-          </Button>
-        </Nav.Link>
+        <div className="navBtns">
+          <Nav.Link>
+            <Button className="navBtn">
+              <span className="deviceToggle">ABOUT US</span>
+              <img src={plane} alt="planeIcon" />
+            </Button>
+          </Nav.Link>
+          <Nav.Link href="#contact">
+            <Button className="navBtn">
+              <span className="deviceToggle">CONTACT</span>
+              <img src={plane} alt="planeIcon" />
+            </Button>
+          </Nav.Link>
+        </div>
       </div>
     </Navbar>
   );
