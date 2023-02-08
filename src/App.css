@@ -323,11 +323,6 @@ margin-bottom: 3rem;
 padding: 1rem;
 }
 
-.service:hover{
-  cursor: pointer;
-  background-color: rgba(165, 163, 163, 0.096);
-}
-
 .card-text{
 font-weight: 500;
 }

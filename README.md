@@ -1,9 +1,44 @@
-# Getting Started with Create React App
+# Project Guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Make sure you have Node.js and Visual Studio Code(vsc) installed in your local machine before clone this project. 
+
+
+## Steps
+
+### Step 1. run `npm install` in the terminal (vsc open new terminal) at the root folder
+this will install all the dependencies needed for this project only in this folder. 
+
+### Step 2. run `npm start` in the terminal (vsc open new terminal) at the root folder
+this will start a local server and avalible to load live update of the project as you modifying. 
+
+### Step 3. run `npm run build` in the terminal (vsc open new terminal) at the root folder
+this will create/update the build folder of this project, drag all the contents in folder to FTP folder will make the changes go live. 
+
+## Folder Structure Guide
+Tawk plugin is added in public/index.html
+All other works are done in folder src. Project start point is index.js -> App.js -> MainView/Main.jsx
+### src folder
+#### App.js
+Control "scroll to the top" round button, site route links, Navbar on all pages. Anything added inside <Router> tag will appear on all the site pages, for instance the Navbar. Add Route for new links. 
+#### App.css
+Most styles of the home page are done in this file. 
+#### BlackBanner.jsx, ContactForm.jsx, LogoCarousel.jsx, Navbar.jsx
+These are re-usable components and are shared in almost all the pages/Views. 
+#### ScrollToTop.jsx
+this helps scroll to top automatically every time the link is changed. (bug fixer)
+#### styled.js
+custom tags and reuseable tags. Is used for styling, save the headache of classname Convention and avoid confusion. 
+#### data.js
+all re-usable and shared data is stored in this file. To change the contents on home page, services home page, this might be the only file you have to modify. 
+### src/View folders
+folders' naming convention end with View represents the main pages of the site, include about us page, contact page, 404 page, thank you page, service home page, portfolio page. 
+### src/ServicePages
+inside pages for each services in the service home page. Content in here is not re-usable nor shareable, page style is the same except the header image but contents are customized for each page.
+### src/images
+images needed for shared components/sections. For instace, logo carousel, navbar......
+
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -44,27 +79,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

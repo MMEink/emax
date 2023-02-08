@@ -12,10 +12,14 @@ import SEOandSEMView from "./ServicePages/SEOandSEMView";
 import WebDesignView from "./ServicePages/WebDesignView";
 import NotFoundView from "./NotFoundView/NotFoundView";
 import ThankyouView from "./ThankyouView/ThankyouView";
+import SocialMediaView from "./ServicePages/SocialMediaView";
+import ScrollToTop from "./ScrollToTop";
 import { Row, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, ReactDOM } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { useEffect } from "react";
+import SearchBar from "./SearchBar";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -36,11 +40,11 @@ function App() {
       behavior: "smooth",
     });
   };
-
   window.addEventListener("scroll", toggleVisible);
 
   return (
     <Router className="App">
+      <ScrollToTop />
       <NavbarView />
       <Row>
         <Routes>
@@ -51,11 +55,12 @@ function App() {
             <Route path="portfolio" element={<PortfolioView />}></Route>
             <Route path="contact" element={<ContactView />}></Route>
             <Route path="branding" element={<BrandingView />}></Route>
-            <Route path="webDesign" element={<WebDesignView />}></Route>
+            <Route path="webDevelopment" element={<WebDesignView />}></Route>
             <Route path="SEOandSEM" element={<SEOandSEMView />}></Route>
             <Route path="*" element={<NotFoundView />}></Route>
             <Route path="thankyou" element={<ThankyouView />}></Route>
             <Route path="media" element={<MediaView />}></Route>
+            <Route path="social-media" element={<SocialMediaView />}></Route>
             <Route
               path="email-marketing"
               element={<EmailMarketingView />}

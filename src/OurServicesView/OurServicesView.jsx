@@ -19,7 +19,6 @@ import {
 
 function OurServicesView() {
   const [scrollY, setScrollY] = useState(0);
-
   function logit() {
     setScrollY(window.pageYOffset);
   }
@@ -62,12 +61,14 @@ function OurServicesView() {
                 ></div>
                 {service.subtitle}
               </h4>
-              <h3>{service.name}</h3>
+              <h3>{service.title}</h3>
               <p>{service.describe}</p>
-              <WaveButton>
-                <span>{service.button}</span>
-                <div class="wave"></div>
-              </WaveButton>
+              <Link to={`/${service.link}`}>
+                <WaveButton>
+                  <span>{service.button}</span>
+                  <div class="wave"></div>
+                </WaveButton>
+              </Link>
             </ServiceContentText>
             <ServiceImgFrame>
               <div className="figure">

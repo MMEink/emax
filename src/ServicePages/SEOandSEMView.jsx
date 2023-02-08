@@ -5,6 +5,8 @@ import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
 import { promise } from "../data";
+import PortfolioSection from "../Portfolio/PortfolioSection";
+import { portfolio_data } from "../data";
 import "./services.css";
 import {
   ContentsSection,
@@ -13,7 +15,7 @@ import {
   WaveButton,
 } from "../styled";
 
-export default function SEOandSEMView() {
+export default function WebDesignAndSEOView() {
   return (
     <Row>
       <div className="header services_header">
@@ -27,16 +29,14 @@ export default function SEOandSEMView() {
       <ContentsSection>
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
-          <h2>Content Marketing.</h2>
-          <p style={{ marginBottom: "2rem", width: "90%", fontWeight: 500 }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vitae
-            mollitia dignissimos ab qui aspernatur.
-          </p>
-          <p style={{ marginBottom: "2rem", width: "90%", fontWeight: 500 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            laborum, molestiae eum odit illo pariatur. Sapiente deserunt optio
-            dignissimos maiores pariatur, expedita voluptate quibusdam
-            distinctio beatae.
+          <h2>Better Page Rankings</h2>
+          <p className="paragraph">
+            We recognize how important it is for your website to be found when
+            potential customers are using search engines. So we will optimize
+            your website using the latest SEO best practices to ensure your
+            website is discovered under relevant search terms. Once your website
+            is launched we will continually fine tune our approach to getting
+            you the best search engine placement.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -72,6 +72,7 @@ export default function SEOandSEMView() {
           ))}
         </div>
       </PromiseSection>
+      <PortfolioSection portfolio={portfolio_data.slice(0, 8)} />
       <LogoCarousel />
       <BlackBanner />
       <ContactForm />

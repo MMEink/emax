@@ -5,7 +5,7 @@
 
 .services_header .pageTitle{
     color:#02C1FD;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .services_header .pageTitle:hover{
@@ -26,6 +26,8 @@
 
 .image2{
     animation-delay: 1s;
+    left: 5rem;
+    position: relative
 }
 
 .seeMorebanner{
@@ -40,6 +42,8 @@
     color: #fff;
 }
 
+@media all and (max-width:1450px) {  
+}
 @media all and (max-width:450px) {
     .arrow{
         width: 1%;

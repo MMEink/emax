@@ -4,6 +4,8 @@ import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
+import PortfolioSection from "../Portfolio/PortfolioSection";
+import { portfolio_data } from "../data";
 import { promise } from "../data";
 import "./services.css";
 import {
@@ -27,16 +29,18 @@ export default function EmailMarketingView() {
       <ContentsSection>
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
-          <h2>Content Marketing.</h2>
-          <p style={{ marginBottom: "2rem", width: "90%", fontWeight: 500 }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vitae
-            mollitia dignissimos ab qui aspernatur.
+          <h2>Drive Engagement</h2>
+          <p className="paragraph">
+            Engage with your consumers directly with custom email campaigns
+            featuring strategic content that matters to them. Let the team at
+            E-Max create an email marketing strategy that’s centered around the
+            goals of your business.
           </p>
-          <p style={{ marginBottom: "2rem", width: "90%", fontWeight: 500 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            laborum, molestiae eum odit illo pariatur. Sapiente deserunt optio
-            dignissimos maiores pariatur, expedita voluptate quibusdam
-            distinctio beatae.
+          <p className="paragraph">
+            Email marketing can help you increase your brands awareness, drive
+            engagement, nurture leads and make sales. Our marketing team
+            recognizes these key benefits of email marketing and has a proven
+            track record of countless successful email campaigns.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -47,16 +51,16 @@ export default function EmailMarketingView() {
         </div>
         <div className="images">
           <img
-            src={require(`./images/main-fbrowser.png`)}
+            src={require(`./images/email-marketing-right.png`)}
             alt="image2"
             width="100%"
-            className="image2 fadeInUp"
+            className="image2 fadeInUp loose2"
           />
           <img
-            src={require(`./images/main-fmobile.png`)}
+            src={require(`./images/email-marketing-left.png`)}
             alt="image1"
             style={{ position: "absolute" }}
-            className="image1 fadeInUp"
+            className="image1 fadeInUp loose1"
           />
         </div>
       </ContentsSection>
@@ -72,6 +76,7 @@ export default function EmailMarketingView() {
           ))}
         </div>
       </PromiseSection>
+      <PortfolioSection portfolio={portfolio_data.slice(0, 8)} />
       <LogoCarousel />
       <BlackBanner />
       <ContactForm />

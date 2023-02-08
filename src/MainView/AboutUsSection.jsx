@@ -1,9 +1,9 @@
 import { Row, Col, Card } from "react-bootstrap";
 import { services } from "../data";
 import { Link } from "react-router-dom";
+import "./AboutUsSection.css";
 
 export default function AboutUsSection() {
-  
   return (
     <Row className="aboutusSection">
       <div className="aboutUs" id="aboutUs">
@@ -23,23 +23,30 @@ export default function AboutUsSection() {
         </div>
       </div>
       <Row className="services">
-        {services.map((service) => (
-          <Col md={4} sm={5} key={service.name}>
-            <Link to={`/${service.link}`}>
-            <Card className="service">
-              <Card.Img
-                variant="top"
-                src={require(`${service.img}`)}
-                className="serviceImg"
-              ></Card.Img>
-              <Card.Body>
-                <Card.Title>{service.name}</Card.Title>
-                <Card.Text>{service.describe}</Card.Text>
-              </Card.Body>
-            </Card>
-            </Link>
-          </Col>
-        ))}
+        {services.map(
+          (service) =>
+            service.img && (
+              <Col md={4} sm={5} key={service.name}>
+                <Link to={`/${service.link}`}>
+                  <Card className="service">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <Card.Img
+                      variant="top"
+                      src={require(`${service.img}`)}
+                      className="serviceImg"
+                    ></Card.Img>
+                    <Card.Body>
+                      <Card.Title>{service.name}</Card.Title>
+                      <Card.Text>{service.describe}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Link>
+              </Col>
+            )
+        )}
       </Row>
     </Row>
   );

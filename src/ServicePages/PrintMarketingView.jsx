@@ -5,6 +5,8 @@ import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
 import { promise } from "../data";
+import PortfolioSection from "../Portfolio/PortfolioSection";
+import { portfolio_data } from "../data";
 import "./services.css";
 import {
   ContentsSection,
@@ -27,16 +29,20 @@ export default function PrintMarketingView() {
       <ContentsSection>
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
-          <h2>Content Marketing.</h2>
-          <p style={{ marginBottom: "2rem", width: "90%", fontWeight: 500 }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vitae
-            mollitia dignissimos ab qui aspernatur.
+          <h2>Get Noticed</h2>
+          <p className="paragraph">
+            We're not just digital. Bring your brand to life with brochures,
+            magazine advertisements and a wide variety of printed media. From
+            flyers and postcards to professionally printed catalogs and
+            brochures. Our talented team of designers can produce any type of
+            printed media for your business.
           </p>
-          <p style={{ marginBottom: "2rem", width: "90%", fontWeight: 500 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            laborum, molestiae eum odit illo pariatur. Sapiente deserunt optio
-            dignissimos maiores pariatur, expedita voluptate quibusdam
-            distinctio beatae.
+          <p className="paragraph">
+            Printed media helps increase awareness of your brand and engage
+            current and potential customers. Printed materials and
+            advertisements can help brands stand out and leave lasting
+            impressions in a world where every business seems to be competing in
+            the digital space.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -47,13 +53,13 @@ export default function PrintMarketingView() {
         </div>
         <div className="images">
           <img
-            src={require(`./images/main-fbrowser.png`)}
+            src={require(`./images/Print-Right.png`)}
             alt="image2"
             width="100%"
             className="image2 fadeInUp"
           />
           <img
-            src={require(`./images/main-fmobile.png`)}
+            src={require(`./images/Print-Left.png`)}
             alt="image1"
             style={{ position: "absolute" }}
             className="image1 fadeInUp"
@@ -72,6 +78,7 @@ export default function PrintMarketingView() {
           ))}
         </div>
       </PromiseSection>
+      <PortfolioSection portfolio={portfolio_data.slice(0, 8)} />
       <LogoCarousel />
       <BlackBanner />
       <ContactForm />

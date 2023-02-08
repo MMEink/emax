@@ -5,6 +5,8 @@ import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
 import { promise } from "../data";
+import PortfolioSection from "../Portfolio/PortfolioSection";
+import { portfolio_data } from "../data";
 import "./services.css";
 import {
   ContentsSection,
@@ -27,16 +29,19 @@ export default function MediaView() {
       <ContentsSection>
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
-          <h2>Content Marketing.</h2>
-          <p style={{ marginBottom: "2rem", width: "90%", fontWeight: 500 }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vitae
-            mollitia dignissimos ab qui aspernatur.
+          <h2>Bring Your Brand to Life</h2>
+          <p className="paragraph">
+            Visual content that represents your brand's aesthetic is paramount
+            in engaging potential clients. Let our team of visual experts ensure
+            your media captures your brand identity and excites your audience.
           </p>
-          <p style={{ marginBottom: "2rem", width: "90%", fontWeight: 500 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            laborum, molestiae eum odit illo pariatur. Sapiente deserunt optio
-            dignissimos maiores pariatur, expedita voluptate quibusdam
-            distinctio beatae.
+          <p className="paragraph">
+            Our video production division is equipped with state of the art
+            video cameras and audio recording equipment at our in-house studio.
+            We take advantage of top-of-the-line computers and industry standard
+            programs when editing and producing video content. Our technicians
+            and content directors have years of experience in various forms of
+            media production.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -47,16 +52,16 @@ export default function MediaView() {
         </div>
         <div className="images">
           <img
-            src={require(`./images/main-fbrowser.png`)}
+            src={require(`./images/photography-Videos-Right.png`)}
             alt="image2"
             width="100%"
-            className="image2 fadeInUp"
+            className="image2 fadeInUp clearEdge2"
           />
           <img
-            src={require(`./images/main-fmobile.png`)}
+            src={require(`./images/photography-Videos-Left.png`)}
             alt="image1"
             style={{ position: "absolute" }}
-            className="image1 fadeInUp"
+            className="image1 fadeInUp clearEdge1"
           />
         </div>
       </ContentsSection>
@@ -72,6 +77,7 @@ export default function MediaView() {
           ))}
         </div>
       </PromiseSection>
+      <PortfolioSection portfolio={portfolio_data.slice(0, 8)} />
       <LogoCarousel />
       <BlackBanner />
       <ContactForm />

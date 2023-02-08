@@ -1,10 +1,16 @@
 import logo from "./images/E-MaxHorizontal.svg";
-import { Navbar, Nav, Button, Row} from "react-bootstrap";
+import { Navbar, Nav, Button, Row } from "react-bootstrap";
 import plane from "./images/plane.svg";
-import arrow from "./images/1522547488.svg"
+import arrow from "./images/1522547488.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {DropdownArrow, DropdownArrowContainer, DropdownContainer, NavBtnContainer, Arrow} from './styled'
+import {
+  DropdownArrow,
+  DropdownArrowContainer,
+  DropdownContainer,
+  NavBtnContainer,
+  Arrow,
+} from "./styled";
 import { services } from "./data";
 
 export default function NavbarView() {
@@ -31,44 +37,75 @@ export default function NavbarView() {
               </Button>
             </Link>
           </NavBtnContainer>
-          <NavBtnContainer onMouseEnter={()=>setDropdownToggle(true)}>
-            { window.innerWidth >= 900 ? <Link to={"/ourservices"}>
-              <Button className="navBtn">
+          <NavBtnContainer onMouseEnter={() => setDropdownToggle(true)}>
+            {window.innerWidth >= 900 ? (
+              <Link to={"/ourservices"}>
+                <Button className="navBtn">
+                  <span>Services</span>
+                </Button>
+              </Link>
+            ) : (
+              <Button
+                className="navBtn"
+                onClick={() =>
+                  dropdownToggle
+                    ? setDropdownToggle(false)
+                    : setDropdownToggle(true)
+                }
+              >
                 <span>Services</span>
+                <img
+                  src={arrow}
+                  alt="arrow"
+                  style={dropdownToggle ? { transform: "rotate(58deg)" } : {}}
+                ></img>
               </Button>
-            </Link>:<Button className="navBtn" onClick={()=>dropdownToggle?setDropdownToggle(false):setDropdownToggle(true)}>
-                <span>Services</span><img src={arrow} alt="arrow" style={dropdownToggle?{transform: 'rotate(58deg)'}:{}}></img>
-              </Button>}
-            {dropdownToggle && <DropdownContainer onMouseLeave={()=>setDropdownToggle(false)}><DropdownArrow /><div><ul>{window.innerWidth<=899 && <Link to={"/ourservices"}><li>All Services</li></Link>}{services.map((service, i)=><Link to={`/${service.link}`}><li key={i}>{service.name}</li></Link>)}</ul></div></DropdownContainer>}
-            </NavBtnContainer>
-            <NavBtnContainer>
+            )}
+            {dropdownToggle && (
+              <DropdownContainer onMouseLeave={() => setDropdownToggle(false)}>
+                <DropdownArrow />
+                <div>
+                  <ul>
+                    {window.innerWidth <= 899 && (
+                      <Link to={"/ourservices"}>
+                        <li>All Services</li>
+                      </Link>
+                    )}
+                    {services.map((service, i) => (
+                      <Link to={`/${service.link}`}>
+                        <li key={i}>{service.name}</li>
+                      </Link>
+                    ))}
+                  </ul>
+                </div>
+              </DropdownContainer>
+            )}
+          </NavBtnContainer>
+          <NavBtnContainer>
             <Link to={"/aboutus"}>
               <Button className="navBtn">
-                <span>aboutUs</span>
+                <span>about Us</span>
               </Button>
             </Link>
           </NavBtnContainer>
           <Link to={"/contact"}>
-          <div>
-            <Button
-              className="contactBtn"
-              onMouseEnter={() => setColorChange(true)}
-              onMouseLeave={() => setColorChange(false)}
-            >
-              <span>contact</span>
-              <img
-                src={plane}
-                alt="planeIcon"
-                style={colorChange ? filter : {}}
-              />
-            </Button>
-          </div>
+            <div>
+              <Button
+                className="contactBtn"
+                onMouseEnter={() => setColorChange(true)}
+                onMouseLeave={() => setColorChange(false)}
+              >
+                <span>contact</span>
+                <img
+                  src={plane}
+                  alt="planeIcon"
+                  style={colorChange ? filter : {}}
+                />
+              </Button>
+            </div>
           </Link>
         </Navbar.Collapse>
       </div>
     </Navbar>
-
-
-
   );
 }

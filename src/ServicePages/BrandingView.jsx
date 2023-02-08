@@ -18,7 +18,7 @@ export default function BrandingView() {
   return (
     <Row>
       <div className="header services_header">
-        <h1 className="pageTitle">Branding</h1>
+        <h1 className="pageTitle">Branding Services</h1>
         <div className="arrowContainer">
           <span></span>
           <span></span>
@@ -28,16 +28,20 @@ export default function BrandingView() {
       <ContentsSection>
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
-          <h2>Content Marketing.</h2>
+          <h2>Tell Your Story</h2>
           <p className="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vitae
-            mollitia dignissimos ab qui aspernatur.
+            Your brand is more than a logo, it's who you are. Let us help you
+            discover how to represent yourself to your customers.
           </p>
           <p className="paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            laborum, molestiae eum odit illo pariatur. Sapiente deserunt optio
-            dignissimos maiores pariatur, expedita voluptate quibusdam
-            distinctio beatae.
+            At E-Max Interactive we develop strategies to help develop your
+            brand's identity and effectively communicate the core values of your
+            brand. We want you to make meaningful, long lasting connections with
+            customers.
+          </p>
+          <p className="paragraph">
+            We are creative problem-solvers who can assist you in building a
+            visual foundation to help tell your brand's story.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -48,16 +52,16 @@ export default function BrandingView() {
         </div>
         <div className="images">
           <img
-            src={require(`./images/main-fbrowser.png`)}
+            src={require(`./images/Branding-Right.png`)}
             alt="image2"
             width="100%"
-            className="image2 fadeInUp"
+            className="image2 fadeInUp loose2"
           />
           <img
-            src={require(`./images/main-fmobile.png`)}
+            src={require(`./images/Branding-Left.png`)}
             alt="image1"
             style={{ position: "absolute" }}
-            className="image1 fadeInUp"
+            className="image1 fadeInUp loose1"
           />
         </div>
       </ContentsSection>
