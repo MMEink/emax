@@ -1,5 +1,5 @@
 .services_header{
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(./images/branding-header.jpg);
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/branding-header.jpg);
         
 }
 
@@ -20,14 +20,12 @@
     animation-fill-mode: both
 }
 
-.image1{
+.left_image{
     animation-delay: 1.5s;
 }
 
-.image2{
+.right_image{
     animation-delay: 1s;
-    left: 5rem;
-    position: relative
 }
 
 .seeMorebanner{

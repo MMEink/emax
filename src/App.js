@@ -9,17 +9,15 @@ import EmailMarketingView from "./ServicePages/EmailMarketingView";
 import MediaView from "./ServicePages/MediaView";
 import PrintMarketingView from "./ServicePages/PrintMarketingView";
 import SEOandSEMView from "./ServicePages/SEOandSEMView";
-import WebDesignView from "./ServicePages/WebDesignView";
+import WebDevelopmentView from "./ServicePages/WebDevelopmentView";
 import NotFoundView from "./NotFoundView/NotFoundView";
 import ThankyouView from "./ThankyouView/ThankyouView";
 import SocialMediaView from "./ServicePages/SocialMediaView";
 import ScrollToTop from "./ScrollToTop";
 import { Row, Button } from "react-bootstrap";
-import { useState, ReactDOM } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
-import { useEffect } from "react";
-import SearchBar from "./SearchBar";
+import "./css/App.css";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -55,7 +53,10 @@ function App() {
             <Route path="portfolio" element={<PortfolioView />}></Route>
             <Route path="contact" element={<ContactView />}></Route>
             <Route path="branding" element={<BrandingView />}></Route>
-            <Route path="webDevelopment" element={<WebDesignView />}></Route>
+            <Route
+              path="webDevelopment"
+              element={<WebDevelopmentView />}
+            ></Route>
             <Route path="SEOandSEM" element={<SEOandSEMView />}></Route>
             <Route path="*" element={<NotFoundView />}></Route>
             <Route path="thankyou" element={<ThankyouView />}></Route>

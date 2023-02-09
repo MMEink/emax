@@ -4,19 +4,28 @@ import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
+import { Helmet } from "react-helmet";
 import PortfolioSection from "../Portfolio/PortfolioSection";
-import { promise, portfolio_data } from "../data";
-import "./services.css";
-import {
-  ContentsSection,
-  ServicesSubheader,
-  PromiseSection,
-  WaveButton,
-} from "../styled";
+import PromiseSection from "./PromiseSection";
+import { services, portfolio_data } from "../data";
+import "../css/services-aboutuspage.css";
+import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 
 export default function BrandingView() {
+  const [block_section, setBlockSection] = useState(
+    services.find((s) => s.name == "Branding").blocks
+  );
   return (
     <Row>
+      <Helmet>
+        <title>
+          Professional Business Branding Services | E-Max Interactive
+        </title>
+        <meta
+          name="description"
+          content="Get professional branding services tailored to your service business from E-Max Interactive. We'll help you reach your desired objectives and maximize brand exposure."
+        />
+      </Helmet>
       <div className="header services_header">
         <h1 className="pageTitle">Branding Services</h1>
         <div className="arrowContainer">
@@ -28,20 +37,25 @@ export default function BrandingView() {
       <ContentsSection>
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
-          <h2>Tell Your Story</h2>
+          <h2>Develop Your Brand</h2>
           <p className="paragraph">
-            Your brand is more than a logo, it's who you are. Let us help you
-            discover how to represent yourself to your customers.
+            A strong brand not only creates awareness about your services, but
+            also establishes trust and loyalty from your clientele. Branding can
+            include logo design, creating a unique identity, or formulating a
+            messaging and communications strategy to capture the desired
+            audience's attention.
           </p>
           <p className="paragraph">
-            At E-Max Interactive we develop strategies to help develop your
-            brand's identity and effectively communicate the core values of your
-            brand. We want you to make meaningful, long lasting connections with
-            customers.
+            Finding a trusted partner that has a deep understanding of
+            cutting-edge trends and marketing principles can help your brand
+            become visible in the market and stay ahead of the competition.
           </p>
           <p className="paragraph">
-            We are creative problem-solvers who can assist you in building a
-            visual foundation to help tell your brand's story.
+            E-Max Interactive has over 25 years of experience in creating and
+            curating successful branding campaigns. Our branding services
+            include logo design, brand messaging, and brand guidelines. We work
+            closely with our clients to understand their unique needs and goals,
+            and help create a brand that accurately represents their business.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -52,31 +66,18 @@ export default function BrandingView() {
         </div>
         <div className="images">
           <img
-            src={require(`./images/Branding-Right.png`)}
-            alt="image2"
-            width="100%"
-            className="image2 fadeInUp loose2"
-          />
-          <img
             src={require(`./images/Branding-Left.png`)}
             alt="image1"
-            style={{ position: "absolute" }}
-            className="image1 fadeInUp loose1"
+            className="left_image fadeInUp"
+          />
+          <img
+            src={require(`./images/Branding-Right.png`)}
+            alt="image2"
+            className="right_image fadeInUp"
           />
         </div>
       </ContentsSection>
-      <PromiseSection>
-        <div className="promiseContainer">
-          {promise.map((p, i) => (
-            <div key={i}>
-              <img src={require(`${p.icon}`)} />
-              <p>{p.subheader}</p>
-              <h3>{p.header}</h3>
-              <p style={{ lineHeight: "1.8rem" }}>{p.describe}</p>
-            </div>
-          ))}
-        </div>
-      </PromiseSection>
+      <PromiseSection block_section={block_section} />
       <PortfolioSection portfolio={portfolio_data.slice(0, 8)} />
       <LogoCarousel />
       <BlackBanner />

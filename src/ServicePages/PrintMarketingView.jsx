@@ -4,20 +4,26 @@ import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
-import { promise } from "../data";
+import PromiseSection from "./PromiseSection";
 import PortfolioSection from "../Portfolio/PortfolioSection";
-import { portfolio_data } from "../data";
-import "./services.css";
-import {
-  ContentsSection,
-  ServicesSubheader,
-  PromiseSection,
-  WaveButton,
-} from "../styled";
+import { portfolio_data, services } from "../data";
+import "../css/services-aboutuspage.css";
+import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
+import { Helmet } from "react-helmet";
 
 export default function PrintMarketingView() {
+  const [block_section, setBlockSection] = useState(
+    services.find((s) => s.name == "Print Marketing").blocks
+  );
   return (
     <Row>
+      <Helmet>
+        <title>Business Print Marketing Services | E-Max Interactive</title>
+        <meta
+          name="description"
+          content="Get the best results from your print marketing efforts with help from E-Max Interactive. We create high-impact and professional print materials to attract and engage customers."
+        />
+      </Helmet>
       <div className="header services_header">
         <h1 className="pageTitle">Printing Marketing</h1>
         <div className="arrowContainer">
@@ -31,18 +37,25 @@ export default function PrintMarketingView() {
           <ServicesSubheader>Services</ServicesSubheader>
           <h2>Get Noticed</h2>
           <p className="paragraph">
-            We're not just digital. Bring your brand to life with brochures,
-            magazine advertisements and a wide variety of printed media. From
-            flyers and postcards to professionally printed catalogs and
-            brochures. Our talented team of designers can produce any type of
-            printed media for your business.
+            Print marketing provides a tangible experience to customers that
+            can’t be achieved online. From promotional materials like flyers,
+            brochures, and business cards to larger-scale displays like posters
+            and banners, print is an effective way to reach customers while
+            they’re on the go. It’s also a great way to make a big impression at
+            trade shows or other events.
           </p>
           <p className="paragraph">
-            Printed media helps increase awareness of your brand and engage
-            current and potential customers. Printed materials and
-            advertisements can help brands stand out and leave lasting
-            impressions in a world where every business seems to be competing in
-            the digital space.
+            Using precise and professional language within the print message
+            adds credibility as well as creativity. With clever design elements
+            and customized branding, your customers can gain insight into who
+            you are as a business before they ever step foot in the door.
+          </p>
+          <p className="paragraph">
+            Combined with other forms of digital marketing, print material can
+            help you establish and maintain strong relationships with your
+            customer base. Our team of print marketing professionals can help
+            you create and execute a successful print strategy for your
+            business.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -53,31 +66,18 @@ export default function PrintMarketingView() {
         </div>
         <div className="images">
           <img
-            src={require(`./images/Print-Right.png`)}
-            alt="image2"
-            width="100%"
-            className="image2 fadeInUp"
-          />
-          <img
             src={require(`./images/Print-Left.png`)}
             alt="image1"
-            style={{ position: "absolute" }}
-            className="image1 fadeInUp"
+            className="left_image fadeInUp"
+          />
+          <img
+            src={require(`./images/Print-Right.png`)}
+            alt="image2"
+            className="right_image fadeInUp"
           />
         </div>
       </ContentsSection>
-      <PromiseSection>
-        <div className="promiseContainer">
-          {promise.map((p, i) => (
-            <div>
-              <img src={require(`${p.icon}`)} />
-              <p>{p.subheader}</p>
-              <h3>{p.header}</h3>
-              <p style={{ lineHeight: "1.8rem" }}>{p.describe}</p>
-            </div>
-          ))}
-        </div>
-      </PromiseSection>
+      <PromiseSection block_section={block_section} />
       <PortfolioSection portfolio={portfolio_data.slice(0, 8)} />
       <LogoCarousel />
       <BlackBanner />

@@ -23,7 +23,7 @@ export default function PortfolioSection({ portfolio }) {
     console.log("lightbox open");
   };
   return (
-    <Row style={{ margin: "2rem auto" }}>
+    <Row style={{ margin: "2rem auto", backgroundColor: "white" }}>
       <h3 style={{ textAlign: "center", fontSize: "2rem" }}>
         Our Latest Work <hr style={{ width: "15%", margin: "2rem auto" }} />
       </h3>

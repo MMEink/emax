@@ -1,7 +1,7 @@
 import { Row, Col, Card } from "react-bootstrap";
 import { services } from "../data";
 import { Link } from "react-router-dom";
-import "./AboutUsSection.css";
+import "../css/AboutUsSection.css";
 
 export default function AboutUsSection() {
   return (
@@ -40,7 +40,7 @@ export default function AboutUsSection() {
                     ></Card.Img>
                     <Card.Body>
                       <Card.Title>{service.name}</Card.Title>
-                      <Card.Text>{service.describe}</Card.Text>
+                      <Card.Text>{service.hp_describe}</Card.Text>
                     </Card.Body>
                   </Card>
                 </Link>

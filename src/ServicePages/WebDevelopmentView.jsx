@@ -11,21 +11,23 @@ import "../css/services-aboutuspage.css";
 import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 import { Helmet } from "react-helmet";
 
-export default function WebDesignAndSEOView() {
+export default function WebDevelopmentView() {
   const [block_section, setBlockSection] = useState(
-    services.find((s) => s.name == "SEO & SEM").blocks
+    services.find((s) => s.name == "Web Development").blocks
   );
   return (
     <Row>
       <Helmet>
-        <title>SEO & SEM Services for YourBusinesses | E-Max Interactive</title>
+        <title>
+          Professional Web Development and Design Services | E-Max Interactive
+        </title>
         <meta
           name="description"
-          content="Let E-Max Interactive craft a comprehensive SEO & SEM strategy to optimize your online presence and reach potential customers."
+          content="Elevate your company’s online presence with E-Max Interactive’s comprehensive web development services. Contact us today for personalized web design solutions."
         />
       </Helmet>
       <div className="header services_header">
-        <h1 className="pageTitle">SEO & SEM</h1>
+        <h1 className="pageTitle">Web Development</h1>
         <div className="arrowContainer">
           <span></span>
           <span></span>
@@ -35,28 +37,25 @@ export default function WebDesignAndSEOView() {
       <ContentsSection>
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
-          <h2>Better Page Rankings</h2>
+          <h2>Beautiful Websites</h2>
           <p className="paragraph">
-            SEO (search engine optimization) and SEM (search engine marketing)
-            work together to strategically drive customers to your website using
-            both organic traffic and paid ad campaigns. With a thorough
-            understanding of how customers use search engines, a well-crafted
-            SEO & SEM plan can foster more leads, increase awareness and build
-            trust in your company.
+            Web development has become an essential business tool that can
+            provide countless opportunities for marketing to customers and
+            keeping them informed. It presents versatile means of reaching
+            clients, as well as tracking customer engagement and analytics.
+            Having an established web presence enables companies to take
+            advantage of numerous online tools that drive leads and growth for
+            the long-term.
           </p>
           <p className="paragraph">
-            You want people to find your website when they search for the
-            services you offer, that is why SEO & SEM are invaluable tools.
-            E-Max Interactive can help you create a comprehensive SEO & SEM
-            strategy to optimize your online presence and reach potential
-            customers. With our specialized experience in this area, we can make
-            sure your website is featured prominently in search engine results.
-          </p>
-          <p className="paragraph">
-            Our SEO services include keyword research, on-page optimization,
-            link building, and content creation. We use the latest tools and
-            techniques to ensure that your website is optimized for search
-            engines and your target audience.
+            At E-Max Interactive, we use our expertise to ensure that your
+            website has the desired impact. Our team of web developers and
+            designers specialize in creating visually appealing, fast loading
+            websites with SEO-friendly content. Our web development services
+            include website design, website development, and website
+            maintenance. We take a collaborative approach to our projects,
+            working closely with our clients to understand their vision and
+            bring it to life.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -67,12 +66,12 @@ export default function WebDesignAndSEOView() {
         </div>
         <div className="images">
           <img
-            src={require(`./images/SEO-Slide-up-Left.png`)}
+            src={require(`./images/Web-New-Left.png`)}
             alt="image1"
             className="left_image fadeInUp"
           />
           <img
-            src={require(`./images/SEO-Slide-up-Right.png`)}
+            src={require(`./images/Web-New-Right.png`)}
             alt="image2"
             className="right_image fadeInUp"
           />

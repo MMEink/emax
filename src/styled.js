@@ -2,11 +2,8 @@ import styled from "styled-components";
 import placeholder from "./images/webDesign-placeholder.jpg";
 
 export const DropdownArrow = styled.div`
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: -11px;
-  left: 75px;
+  width: 15px;
+  height: 15px;
   transform: rotate(45deg);
   background-color: white;
   border-top: 1px solid #02c1fd;
@@ -23,7 +20,7 @@ export const DropdownContainer = styled.div`
   border-radius: 10px;
   z-index: 9999;
   position: relative;
-  top: 1rem;
+  top: -2px;
   left: 2rem;
   height: 400px;
   width: 250px;
@@ -334,8 +331,12 @@ export const ModalCloseBtn = styled.button`
 export const ContentsSection = styled.div`
   display: flex;
   width: 80%;
+  max-width: 1600px;
   margin: 3rem auto;
   color: #444;
+  .images {
+    align-items: self-end;
+  }
 
   div {
     width: 50%;
@@ -368,130 +369,73 @@ export const ContentsSection = styled.div`
     justify-content: center;
   }
 
-  .image1 {
-    width: 40%;
-    right: 9rem;
-    top: 50rem;
+  .left_image {
+    position: relative;
+    left: 3rem;
+    max-width: 800px;
+    top: 21px;
   }
 
-  .image2 {
-    margin-top: 1.5rem;
+  .clearEdge {
+    top: 3rem;
   }
 
-  .clearEdge1 {
-    top: 52rem;
+  .right_image {
+    position: absolute;
+    max-width: 800px;
+    margin-top: 3rem;
+    z-index: -1;
   }
 
-  @media all and (max-width: 1700px) {
-    .clearEdge2 {
-      height: 85%;
-    }
-
-    .clearEdge1 {
-      top: 62rem;
+  @media all and (min-width: 1200px) {
+    .left_image {
+      max-height: 80%;
     }
   }
 
-  @media all and (max-width: 1600px) {
-    .image2 {
-      max-width: 100%;
-      min-width: 100%;
-    }
-    .clearEdge2 {
-      height: 75%;
-    }
-    .clearEdge1 {
-      top: 65rem;
-    }
-  }
-  @media all and (max-width: 1450px) {
+  @media all and (max-width: 1500px) {
     h2 {
       font-size: 3rem;
     }
 
-    .image2 {
-      height: 80%;
+    .left_image {
+      left: 6rem;
+      max-width: 800px;
     }
     .paragraph {
       font-size: 0.9rem;
-    }
-
-    .image1 {
-      width: 50%;
-      right: -3rem;
-      top: 47rem;
-    }
-
-    .clearEdge1 {
-      top: 61rem;
     }
   }
   @media all and (max-width: 1200px) {
     margin-bottom: 0;
     flex-direction: column;
 
-    .image2 {
-      height: 100%;
-    }
-
     div {
       width: 100%;
     }
 
-    .image1 {
-      width: 70%;
-      right: 12rem;
-      top: 66rem;
-    }
     .paragraph {
       width: 100%;
     }
 
-    .image2 {
-      left: 2rem;
-    }
-
-    .clearEdge1 {
-      right: 16rem;
-      top: 73rem;
-    }
-  }
-
-  @media all and (max-width: 1100px) {
-    .clearEdge1 {
-      top: 77rem;
-    }
-  }
-  @media all and (max-width: 1000px) {
-    .image1 {
-      right: 11rem;
-      top: 66rem;
-    }
-    .image2 {
+    .left_image {
       left: 0rem;
-    }
-    .loose1 {
-      top: 74rem;
+      top: 0rem;
+      max-width: 900px;
     }
 
-    .clearEdge1 {
-      right: 11rem;
-      top: 78rem;
+    .right_image {
+      width: 100%;
     }
   }
-
   @media all and (max-width: 850px) {
-    .image1 {
-      right: 7rem;
-      top: 71rem;
+    .left_image {
+      left: -2rem;
+      max-width: 650px;
     }
-    .loose1 {
-      top: 76rem;
-    }
-
-    .clearEdge1 {
-      right: 11rem;
-      top: 78rem;
+    .right_image {
+      width: 90%;
+      top: 80rem;
     }
   }
 
@@ -500,41 +444,27 @@ export const ContentsSection = styled.div`
     .paragraph {
       width: 100%;
     }
-
-    .image1 {
-      right: 5rem;
-      top: 49rem;
-      width: 80%;
+    .left_image {
+      max-width: 550px;
+      left: 2rem;
     }
-
-    .loose1 {
-      top: 57rem;
-    }
-
-    .clearEdge1 {
-      top: 63rem;
+    .right_image {
+      top: auto;
     }
   }
 
   @media all and (max-width: 450px) {
-    .clearEdge1 {
-      top: 66.5rem !important;
+    .left_image {
+      max-width: 370px;
+      left: 0rem;
     }
 
-    .image1 {
-      right: 4rem;
-      top: 57.5rem;
-    }
-
-    .loose1 {
-      top: 63rem;
+    .right_image {
+      margin-top: 0;
     }
   }
 
   @media all and (max-width: 390px) {
-    .clearEdge1 {
-      top: 67.5rem !important;
-    }
   }
 `;
 
@@ -554,7 +484,7 @@ export const ServicesSubheader = styled.p`
   }
 `;
 
-export const PromiseSection = styled.div`
+export const PromiseSectionContainer = styled.div`
   background-color: #f2f4f4;
   color: #444;
   z-index: 999;
@@ -564,6 +494,7 @@ export const PromiseSection = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 75%;
+    max-width: 1600px;
     margin: 6rem auto;
     grid-gap: 7rem;
 

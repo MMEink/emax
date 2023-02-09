@@ -4,20 +4,28 @@ import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
-import { promise } from "../data";
+import PromiseSection from "./PromiseSection";
 import PortfolioSection from "../Portfolio/PortfolioSection";
-import { portfolio_data } from "../data";
-import "./services.css";
-import {
-  ContentsSection,
-  ServicesSubheader,
-  PromiseSection,
-  WaveButton,
-} from "../styled";
+import { portfolio_data, services } from "../data";
+import "../css/services-aboutuspage.css";
+import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
+import { Helmet } from "react-helmet";
 
 export default function MediaView() {
+  const [block_section, setBlockSection] = useState(
+    services.find((s) => s.name == "Photography & Videos").blocks
+  );
   return (
     <Row>
+      <Helmet>
+        <title>
+          Professional Photography & Videography services | E-Max Interactive
+        </title>
+        <meta
+          name="description"
+          content="E-Max Interactive offers professional photography and videography services that help businesses stand out from the competition. Contact us today for more information!"
+        />
+      </Helmet>
       <div className="header services_header">
         <h1 className="pageTitle">Photography & Videos</h1>
         <div className="arrowContainer">
@@ -31,17 +39,23 @@ export default function MediaView() {
           <ServicesSubheader>Services</ServicesSubheader>
           <h2>Bring Your Brand to Life</h2>
           <p className="paragraph">
-            Visual content that represents your brand's aesthetic is paramount
-            in engaging potential clients. Let our team of visual experts ensure
-            your media captures your brand identity and excites your audience.
+            Photography and video have become the go-to for businesses in the
+            service industry looking to market themselves. Professional
+            photographs can make a lasting impression on customers, while video
+            clips give an enhanced insight into what each service provider is
+            offering. Images add life and color to products or services, and
+            these visuals create excitement while also helping customers connect
+            with the brand.
           </p>
           <p className="paragraph">
-            Our video production division is equipped with state of the art
-            video cameras and audio recording equipment at our in-house studio.
-            We take advantage of top-of-the-line computers and industry standard
-            programs when editing and producing video content. Our technicians
-            and content directors have years of experience in various forms of
-            media production.
+            With digital platforms like Instagram, Youtube, and TikTok providing
+            access to millions of views each day, creative photography and video
+            content is helping many service professionals rise to the top. At
+            E-Max Interactive, we work closely with our clients to create
+            meaningful visuals that help them stand out from the competition. We
+            use cutting-edge technology to ensure that all of our photographs
+            and videos adhere to the highest standards, giving your brand the
+            edge it needs.
           </p>
           <HashLink to="#contact">
             <WaveButton>
@@ -52,31 +66,18 @@ export default function MediaView() {
         </div>
         <div className="images">
           <img
-            src={require(`./images/photography-Videos-Right.png`)}
-            alt="image2"
-            width="100%"
-            className="image2 fadeInUp clearEdge2"
-          />
-          <img
             src={require(`./images/photography-Videos-Left.png`)}
             alt="image1"
-            style={{ position: "absolute" }}
-            className="image1 fadeInUp clearEdge1"
+            className="left_image fadeInUp clearEdge"
+          />
+          <img
+            src={require(`./images/photography-Videos-Right.png`)}
+            alt="image2"
+            className="right_image fadeInUp"
           />
         </div>
       </ContentsSection>
-      <PromiseSection>
-        <div className="promiseContainer">
-          {promise.map((p, i) => (
-            <div>
-              <img src={require(`${p.icon}`)} />
-              <p>{p.subheader}</p>
-              <h3>{p.header}</h3>
-              <p style={{ lineHeight: "1.8rem" }}>{p.describe}</p>
-            </div>
-          ))}
-        </div>
-      </PromiseSection>
+      <PromiseSection block_section={block_section} />
       <PortfolioSection portfolio={portfolio_data.slice(0, 8)} />
       <LogoCarousel />
       <BlackBanner />

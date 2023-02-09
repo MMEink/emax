@@ -37,7 +37,10 @@ export default function NavbarView() {
               </Button>
             </Link>
           </NavBtnContainer>
-          <NavBtnContainer onMouseEnter={() => setDropdownToggle(true)}>
+          <NavBtnContainer
+            onMouseEnter={() => setDropdownToggle(true)}
+            onMouseLeave={() => setDropdownToggle(false)}
+          >
             {window.innerWidth >= 900 ? (
               <Link to={"/ourservices"}>
                 <Button className="navBtn">
@@ -62,8 +65,10 @@ export default function NavbarView() {
               </Button>
             )}
             {dropdownToggle && (
-              <DropdownContainer onMouseLeave={() => setDropdownToggle(false)}>
-                <DropdownArrow />
+              <DropdownContainer>
+                <div className="dropdownArrowContainer">
+                  <DropdownArrow />
+                </div>
                 <div>
                   <ul>
                     {window.innerWidth <= 899 && (

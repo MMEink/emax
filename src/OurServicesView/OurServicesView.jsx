@@ -6,10 +6,7 @@ import { Link } from "react-router-dom";
 import ContactForm from "../ContactForm";
 import { services } from "../data";
 import placeholder from "../images/branding-placeholder.jpg";
-import placeholder1 from "../images/webDesign-placeholder.jpg";
 import LogoCarousel from "../LogoCarousel";
-
-import "./OurServicesView.css";
 import {
   ServiceContent,
   ServiceContentText,
@@ -62,7 +59,9 @@ function OurServicesView() {
                 {service.subtitle}
               </h4>
               <h3>{service.title}</h3>
-              <p>{service.describe}</p>
+              {service.sp_describle.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
               <Link to={`/${service.link}`}>
                 <WaveButton>
                   <span>{service.button}</span>
