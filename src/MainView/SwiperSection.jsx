@@ -18,15 +18,14 @@ import { Nav } from "react-bootstrap";
 export default function SwiperSection() {
   return (
     <Swiper
-      modules={[Pagination, Autoplay, EffectFade]}
+      modules={[Autoplay, EffectFade]}
       effect="fade"
-      pagination={{ clickable: false }}
       autoplay={true}
       speed={4000}
       spaceBetween={50}
       slidesPerView={1}
       centeredSlides
-      style={{marginTop:"1rem",width:"100%"}}
+      style={{ marginTop: "1rem", width: "100%" }}
     >
       <Nav.Link href="#aboutUs">
         <div className="slogan">

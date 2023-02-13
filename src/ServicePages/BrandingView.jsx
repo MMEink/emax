@@ -1,6 +1,6 @@
 import BlackBanner from "../BlackBanner";
-import { Row, Button } from "react-bootstrap";
-import { useState } from "react";
+import { Row } from "react-bootstrap";
+import { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
@@ -11,9 +11,9 @@ import { services, portfolio_data } from "../data";
 import "../css/services-aboutuspage.css";
 import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 
-export default function BrandingView() {
+export default function BrandingView({ scrollY }) {
   const [block_section, setBlockSection] = useState(
-    services.find((s) => s.name == "Branding").blocks
+    services.find((s) => s.name === "Branding").blocks
   );
   return (
     <Row>
@@ -28,13 +28,15 @@ export default function BrandingView() {
       </Helmet>
       <div className="header services_header">
         <h1 className="pageTitle">Branding Services</h1>
-        <div className="arrowContainer">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <HashLink to="#branding-contents">
+          <div className="arrowContainer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </HashLink>
       </div>
-      <ContentsSection>
+      <ContentsSection id="branding-contents">
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
           <h2>Develop Your Brand</h2>
@@ -68,12 +70,12 @@ export default function BrandingView() {
           <img
             src={require(`./images/Branding-Left.png`)}
             alt="image1"
-            className="left_image fadeInUp"
+            className={scrollY > 350 ? "left_image fadeInUp" : "opacityToggle"}
           />
           <img
             src={require(`./images/Branding-Right.png`)}
             alt="image2"
-            className="right_image fadeInUp"
+            className={scrollY > 350 ? "right_image fadeInUp" : "opacityToggle"}
           />
         </div>
       </ContentsSection>

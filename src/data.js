@@ -219,37 +219,37 @@ export const services = [
 export const portfolio_data = [
   {
     name: "Open Imagination",
-    category: ["Icons", "Media"],
+    category: ["Branding", "Social Media"],
     image: ["./images/1.jpg"],
   },
   {
     name: "Morning Dew",
-    category: ["Illustrations", "Icons"],
+    category: ["SEO & SEM", "Branding"],
     image: ["./images/4-1.jpg", "./images/4.jpg"],
   },
   {
     name: "Backpack Contents",
-    category: ["UI Elements", "Icons"],
+    category: ["Web Development", "Branding"],
     image: ["./images/9-1.jpg", "./images/9-2.jpg", "./images/9.jpg"],
   },
   {
     name: "Bridge Side",
-    category: ["Illustrations", "Icons"],
+    category: ["SEO & SEM", "Branding"],
     image: ["./images/9-1.jpg", "./images/9-2.jpg", "./images/9.jpg"],
   },
   {
     name: "Workspace Stuff",
-    category: ["Media", "Icons"],
+    category: ["Media", "Branding"],
     image: ["./images/11.jpg"],
   },
   {
     name: "Locked Steel Gate",
-    category: ["Illustrations"],
+    category: ["SEO & SEM", "Social Media"],
     image: ["./images/2.jpg"],
   },
   {
     name: "Shake It!",
-    category: ["Illustrations", "Graphics"],
+    category: ["SEO & SEM", "Print Marketing"],
     image: [
       "./images/6.jpg",
       "./images/6-1.jpg",
@@ -259,27 +259,27 @@ export const portfolio_data = [
   },
   {
     name: "Fixed Aperture",
-    category: ["Illustrations", "Graphics"],
+    category: ["SEO & SEM", "Print Marketing"],
     image: ["./images/12.jpg", "./images/12-1.jpg"],
   },
   {
     name: "Mac Sunglasses",
-    category: ["UI Elements", "Graphics"],
+    category: ["Web Development", "Email Marketing"],
     image: ["./images/12.jpg", "./images/12-1.jpg"],
   },
   {
     name: "Console Activity",
-    category: ["UI Elements", "Media"],
+    category: ["Web Development", "Media"],
     image: ["./images/5.jpg"],
   },
   {
     name: "Study Table",
-    category: ["Graphics", "Media"],
+    category: ["Print Marketing", "Media"],
     image: ["./images/5.jpg"],
   },
   {
     name: "Sunset Bulb Glow",
-    category: ["Graphics"],
+    category: ["Email Marketing"],
     image: ["./images/8.jpg"],
   },
 ];

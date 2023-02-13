@@ -1,5 +1,5 @@
 import BlackBanner from "../BlackBanner";
-import { Row, Button } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
@@ -11,9 +11,9 @@ import "../css/services-aboutuspage.css";
 import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 import { Helmet } from "react-helmet";
 
-export default function SocialMediaView() {
+export default function SocialMediaView({ scrollY }) {
   const [block_section, setBlockSection] = useState(
-    services.find((s) => s.name == "Social Media").blocks
+    services.find((s) => s.name === "Social Media").blocks
   );
   return (
     <Row>
@@ -29,13 +29,15 @@ export default function SocialMediaView() {
       </Helmet>
       <div className="header services_header">
         <h1 className="pageTitle">Social Media Marketing</h1>
-        <div className="arrowContainer">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <HashLink to="#socialmedia-contents">
+          <div className="arrowContainer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </HashLink>
       </div>
-      <ContentsSection>
+      <ContentsSection id="socialmedia-contents">
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
           <h2>Let's Get Social</h2>
@@ -71,12 +73,12 @@ export default function SocialMediaView() {
           <img
             src={require(`./images/Social-Media-Left.png`)}
             alt="image1"
-            className="left_image fadeInUp"
+            className={scrollY > 350 ? "left_image fadeInUp" : "opacityToggle"}
           />
           <img
             src={require(`./images/Social-Media-Right.png`)}
             alt="image2"
-            className="right_image fadeInUp"
+            className={scrollY > 350 ? "right_image fadeInUp" : "opacityToggle"}
           />
         </div>
       </ContentsSection>

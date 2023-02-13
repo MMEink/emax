@@ -1,5 +1,5 @@
 import BlackBanner from "../BlackBanner";
-import { Row, Button } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
@@ -11,9 +11,9 @@ import "../css/services-aboutuspage.css";
 import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 import { Helmet } from "react-helmet";
 
-export default function WebDevelopmentView() {
+export default function WebDevelopmentView({ scrollY }) {
   const [block_section, setBlockSection] = useState(
-    services.find((s) => s.name == "Web Development").blocks
+    services.find((s) => s.name === "Web Development").blocks
   );
   return (
     <Row>
@@ -28,13 +28,15 @@ export default function WebDevelopmentView() {
       </Helmet>
       <div className="header services_header">
         <h1 className="pageTitle">Web Development</h1>
-        <div className="arrowContainer">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <HashLink to="#webdev-contents">
+          <div className="arrowContainer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </HashLink>
       </div>
-      <ContentsSection>
+      <ContentsSection id="webdev-contents">
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
           <h2>Beautiful Websites</h2>
@@ -68,12 +70,12 @@ export default function WebDevelopmentView() {
           <img
             src={require(`./images/Web-New-Left.png`)}
             alt="image1"
-            className="left_image fadeInUp"
+            className={scrollY > 350 ? "left_image fadeInUp" : "opacityToggle"}
           />
           <img
             src={require(`./images/Web-New-Right.png`)}
             alt="image2"
-            className="right_image fadeInUp"
+            className={scrollY > 350 ? "right_image fadeInUp" : "opacityToggle"}
           />
         </div>
       </ContentsSection>

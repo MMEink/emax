@@ -15,13 +15,15 @@ function AboutUsView() {
     <Row>
       <div className="header aboutPg">
         <h1 className="pageTitle">About Us</h1>
-        <div className="arrowContainer">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <HashLink to="#aboutuspage-contents">
+          <div className="arrowContainer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </HashLink>
       </div>
-      <ContentsSection>
+      <ContentsSection id="aboutuspage-contents">
         <div className="text" style={{ marginTop: "3rem" }}>
           <h2>Get to Know Us Better</h2>
           <p className="paragraph">

@@ -4,34 +4,32 @@ import plane from "./images/plane.svg";
 import arrow from "./images/1522547488.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {
-  DropdownArrow,
-  DropdownArrowContainer,
-  DropdownContainer,
-  NavBtnContainer,
-  Arrow,
-} from "./styled";
+import { DropdownArrow, DropdownContainer, NavBtnContainer } from "./styled";
 import { services } from "./data";
 
 export default function NavbarView() {
   const [colorChange, setColorChange] = useState(false);
   const [dropdownToggle, setDropdownToggle] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   let filter = {
     filter:
       "invert(96%) sepia(0%) saturate(16%) hue-rotate(282deg) brightness(103%) contrast(105%)",
   };
   return (
-    <Navbar sticky="top" variant="light" expand="lg">
+    <Navbar sticky="top" variant="light" expand="lg" expanded={expanded}>
       <div className="main-nav">
         <Navbar.Brand>
           <Link to={"/"}>
             <img src={logo} alt="logo" className="navbar-logo" />
           </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => setExpanded(expanded ? false : "expanded")}
+        />
         <Navbar.Collapse id="responsive-navbar-nav" className="navBtns">
           <NavBtnContainer>
-            <Link to={"/portfolio"}>
+            <Link to={"/portfolio"} onClick={() => setExpanded(false)}>
               <Button className="navBtn">
                 <span>Portfolio</span>
               </Button>
@@ -42,7 +40,7 @@ export default function NavbarView() {
             onMouseLeave={() => setDropdownToggle(false)}
           >
             {window.innerWidth >= 900 ? (
-              <Link to={"/ourservices"}>
+              <Link to={"/ourservices"} onClick={() => setExpanded(false)}>
                 <Button className="navBtn">
                   <span>Services</span>
                 </Button>
@@ -72,12 +70,24 @@ export default function NavbarView() {
                 <div>
                   <ul>
                     {window.innerWidth <= 899 && (
-                      <Link to={"/ourservices"}>
+                      <Link
+                        to={"/ourservices"}
+                        onClick={() => {
+                          setDropdownToggle(false);
+                          setExpanded(false);
+                        }}
+                      >
                         <li>All Services</li>
                       </Link>
                     )}
                     {services.map((service, i) => (
-                      <Link to={`/${service.link}`}>
+                      <Link
+                        to={`/${service.link}`}
+                        onClick={() => {
+                          setDropdownToggle(false);
+                          setExpanded(false);
+                        }}
+                      >
                         <li key={i}>{service.name}</li>
                       </Link>
                     ))}
@@ -87,13 +97,13 @@ export default function NavbarView() {
             )}
           </NavBtnContainer>
           <NavBtnContainer>
-            <Link to={"/aboutus"}>
+            <Link to={"/aboutus"} onClick={() => setExpanded(false)}>
               <Button className="navBtn">
                 <span>about Us</span>
               </Button>
             </Link>
           </NavBtnContainer>
-          <Link to={"/contact"}>
+          <Link to={"/contact"} onClick={() => setExpanded(false)}>
             <div>
               <Button
                 className="contactBtn"

@@ -15,13 +15,26 @@ import ThankyouView from "./ThankyouView/ThankyouView";
 import SocialMediaView from "./ServicePages/SocialMediaView";
 import ScrollToTop from "./ScrollToTop";
 import { Row, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./css/App.css";
 
 function App() {
   const [visible, setVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  function logit() {
+    setScrollY(window.pageYOffset);
+  }
 
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  }, []);
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
 
@@ -52,23 +65,35 @@ function App() {
             <Route path="ourservices" element={<OurServicesView />}></Route>
             <Route path="portfolio" element={<PortfolioView />}></Route>
             <Route path="contact" element={<ContactView />}></Route>
-            <Route path="branding" element={<BrandingView />}></Route>
+            <Route
+              path="branding"
+              element={<BrandingView scrollY={scrollY} />}
+            ></Route>
             <Route
               path="webDevelopment"
-              element={<WebDevelopmentView />}
+              element={<WebDevelopmentView scrollY={scrollY} />}
             ></Route>
-            <Route path="SEOandSEM" element={<SEOandSEMView />}></Route>
+            <Route
+              path="SEOandSEM"
+              element={<SEOandSEMView scrollY={scrollY} />}
+            ></Route>
             <Route path="*" element={<NotFoundView />}></Route>
             <Route path="thankyou" element={<ThankyouView />}></Route>
-            <Route path="media" element={<MediaView />}></Route>
-            <Route path="social-media" element={<SocialMediaView />}></Route>
+            <Route
+              path="media"
+              element={<MediaView scrollY={scrollY} />}
+            ></Route>
+            <Route
+              path="social-media"
+              element={<SocialMediaView scrollY={scrollY} />}
+            ></Route>
             <Route
               path="email-marketing"
-              element={<EmailMarketingView />}
+              element={<EmailMarketingView scrollY={scrollY} />}
             ></Route>
             <Route
               path="print-marketing"
-              element={<PrintMarketingView />}
+              element={<PrintMarketingView scrollY={scrollY} />}
             ></Route>
           </Route>
         </Routes>

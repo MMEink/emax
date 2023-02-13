@@ -30,10 +30,6 @@ a {
   flex-direction: column;
   align-items: center;
 }
-
-.aboutUs, .services, .formContainer, .bannerContent{
-  max-width: 1600px;
-}
 .aboutPg{
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 85%/100% url(../images/pexels-pixabay-461064.jpg)
 }
@@ -108,7 +104,6 @@ color: red;
 
 .swiper-container{
   width: 100%;
-  max-width: 1600px;
 }
 .navbar{
   background-color:#fff;
@@ -118,7 +113,7 @@ color: red;
   flex-direction: column;
 }
 
-.main-nav,.aboutusSection,.bannerContent, .formContainer{
+.main-nav,.aboutusSection,.bannerContent, .formContainer, .servicePg-contents, .swiper-container, .services{
   max-width: 1600px;
 }
 
@@ -130,6 +125,7 @@ color: red;
   justify-items: flex-end;
   width: 100%;
   background-color: white;
+  margin: 0 1rem;
 }
 
 .navbarContainer{
@@ -137,7 +133,7 @@ height: 110px;
 }
 
 .navbar-brand{
-  justify-self: center;
+  justify-self: flex-start;
 }
 
 .navBtns{
@@ -455,7 +451,7 @@ form{
 }
 
 .rtSection p{
-  margin: 4rem 0 4rem 4rem;
+  margin: 4rem 0;
   font-weight: 500;
 }
 
@@ -523,11 +519,20 @@ top: 4rem;
 form .btn{
   margin-bottom: 1rem;
 }
-@media all and (min-width: 900px)  {
-  .navbar-brand, .navBtns{
-    margin-right: 6rem;
-  }
+
+@media all and (max-width:1400px) {
+.slogan{
+  left: 6%;
+} 
+.card-text, .aboutUs p{
+  font-size: 0.8rem;
+} 
+
+.aboutUs h3{
+  font-size: 1.8rem;
 }
+}
+
 @media all and (max-width: 600px)  {
 
   .modal_singleImg{
@@ -693,13 +698,22 @@ form .btn{
 
   .logoImg{
     width: 100%;
+    margin-bottom: 2rem;
   }
 
-  .tardis{
-    width: 90%;
+  .tardis, .infuso{
+    width: 80%;
+  }
+
+  .contactBtn{
+    margin-left: 0;
   }
   }
   @media all and (max-width:1200px) and (min-width:601px){
+
+    .card-title{
+      font-size: 1.5rem;
+    }
 
     .modal_singleImg{
       width: 60%;
@@ -743,6 +757,7 @@ form .btn{
     .main-nav{
       width: 100%;
       padding: 0 0.5rem;
+      margin: 0;
 
     }
     
@@ -758,6 +773,7 @@ form .btn{
     .logoImg{
       width: 100%;
     }
+
     .slogan h2{
       width: 80%;
       font-size: 2.5rem;
@@ -780,7 +796,7 @@ form .btn{
     
   .services{
       flex-direction: row;
-      padding: 0 2rem;
+      padding: 0 1rem;
       width: 100%;
   }
   
@@ -805,7 +821,7 @@ form .btn{
   }
   
   .formContainer, .aboutUs, .bannerContent{
-    width: 85%;
+    width: 90%;
     margin: 5rem auto;
     padding: 2rem 2rem;
   }

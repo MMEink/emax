@@ -1,6 +1,6 @@
 import BlackBanner from "../BlackBanner";
-import { Row, Button } from "react-bootstrap";
-import { useState } from "react";
+import { Row } from "react-bootstrap";
+import { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import ContactForm from "../ContactForm";
 import LogoCarousel from "../LogoCarousel";
@@ -11,9 +11,9 @@ import "../css/services-aboutuspage.css";
 import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 import { Helmet } from "react-helmet";
 
-export default function EmailMarketingView() {
+export default function EmailMarketingView({ scrollY }) {
   const [block_section, setBlockSection] = useState(
-    services.find((s) => s.name == "Email Marketing").blocks
+    services.find((s) => s.name === "Email Marketing").blocks
   );
   return (
     <Row>
@@ -26,13 +26,15 @@ export default function EmailMarketingView() {
       </Helmet>
       <div className="header services_header">
         <h1 className="pageTitle">Email Marketing</h1>
-        <div className="arrowContainer">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <HashLink to="#emailMkt-contents">
+          <div className="arrowContainer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </HashLink>
       </div>
-      <ContentsSection>
+      <ContentsSection id="emailMkt-contents">
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
           <h2>Drive Engagement</h2>
@@ -62,7 +64,7 @@ export default function EmailMarketingView() {
           <HashLink to="#contact">
             <WaveButton>
               <span>Get Started</span>
-              <div class="wave"></div>
+              <div className="wave"></div>
             </WaveButton>
           </HashLink>
         </div>
@@ -70,12 +72,12 @@ export default function EmailMarketingView() {
           <img
             src={require(`./images/email-marketing-left.png`)}
             alt="image1"
-            className="left_image fadeInUp"
+            className={scrollY > 350 ? "left_image fadeInUp" : "opacityToggle"}
           />
           <img
             src={require(`./images/email-marketing-right.png`)}
             alt="image2"
-            className="right_image fadeInUp"
+            className={scrollY > 350 ? "right_image fadeInUp" : "opacityToggle"}
           />
         </div>
       </ContentsSection>

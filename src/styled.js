@@ -134,18 +134,6 @@ export const ServiceImgFrame = styled.div`
   .image-1 {
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent;
-  }
-
-  .image-2 {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: none;
   }
   @media all and (max-width: 1200px) {
     width: 350px;
@@ -161,6 +149,7 @@ export const WorkCards = styled.div`
   width: 70%;
   margin: auto;
   margin-bottom: 4rem;
+  max-width: 1600px;
   .card {
     width: 90%;
   }
@@ -194,10 +183,10 @@ export const WorkCardsNav = styled.ul`
     display: inline-block;
     border-right: 1px;
   }
-  width: 50%;
   justify-content: center;
   margin: 2rem auto;
   text-align: center;
+  padding-left: 0;
 
   li:hover,
   li::after {
@@ -217,13 +206,15 @@ export const WorkCardsNav = styled.ul`
   }
 
   @media all and (max-width: 1400px) {
-    width: 100%;
-  }
+    font-size: 0.7rem;
 
-  @media all and (max-width: 600px) {
     li {
-      font-size: 0.5rem;
+      border: none;
       padding: 0.5rem;
+    }
+
+    li:last-child {
+      border-right: none;
     }
   }
 `;
@@ -308,15 +299,16 @@ export const WaveButton = styled.a`
 `;
 
 export const ModalCloseBtn = styled.button`
-  width: 5%;
-  font-size: 3rem;
+  width: 10%;
+  font-size: 1.5rem;
   background: none;
   border: none;
-  color: dimgrey;
+  color: #fff;
   position: absolute;
-  top: -100px;
+  top: -80px;
   right: 0;
-  font-weight: 900;
+  font-weight: 500;
+  text-decoration: underline;
 
   @media all and (max-width: 1200px) and (min-width: 601px) {
     top: -150px;

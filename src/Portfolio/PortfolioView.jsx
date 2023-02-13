@@ -10,15 +10,18 @@ import { portfolio_data } from "../data";
 import LogoCarousel from "../LogoCarousel";
 import multiple from "./images/image-multiple-svgrepo-com.svg";
 import expand from "./images/resize-svgrepo-com.svg";
+import { HashLink } from "react-router-hash-link";
 
 function PortfolioView() {
   const category = [
     "Show All",
-    "Icons",
-    "Illustrations",
-    "UI Elements",
+    "Branding",
+    "Print Marketing",
+    "Web Development",
     "Media",
-    "Graphics",
+    "Email Marketing",
+    "Social Media",
+    "SEO & SEM",
   ];
   const [portfolioData, setPortfolioData] = useState(portfolio_data);
   const [hoverImg, setHoverImg] = useState("");
@@ -50,55 +53,63 @@ function PortfolioView() {
     <Row>
       <div className="header portfolioPg">
         <h1 className="pageTitle">Portfolio</h1>
-        <div className="arrowContainer">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <HashLink to="#porfoliopage-contents">
+          <div className="arrowContainer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </HashLink>
       </div>
-      <WorkCardsNav>
-        {category.map((b, i) => (
-          <li key={i} onClick={() => OnfilterClick(b)}>
-            {b}
-          </li>
-        ))}
-      </WorkCardsNav>
-      <WorkCards>
-        {portfolioData.map((work, i) => (
-          <Card
-            key={i}
-            style={{ justifyItems: "center", margin: "1rem 0", border: "none" }}
-            onClick={() => handleShow(work)}
-            onMouseEnter={() => setHoverImg(work.name)}
-            onMouseLeave={() => setHoverImg("")}
-          >
-            <Card.Img
-              variant="top"
-              src={require(`${work.image[0]}`)}
-              width="290px"
-              height="200px"
-            />
-            {hoverImg == work.name && (
-              <img
-                style={{ position: "absolute", top: "25%", left: "40%" }}
-                src={work.image.length > 1 ? multiple : expand}
-                onClick={() => handleShow(work)}
+      <div id="porfoliopage-contents">
+        <WorkCardsNav>
+          {category.map((b, i) => (
+            <li key={i} onClick={() => OnfilterClick(b)}>
+              {b}
+            </li>
+          ))}
+        </WorkCardsNav>
+        <WorkCards>
+          {portfolioData.map((work, i) => (
+            <Card
+              key={i}
+              style={{
+                justifyItems: "center",
+                margin: "1rem 0",
+                border: "none",
+              }}
+              onClick={() => handleShow(work)}
+              onMouseEnter={() => setHoverImg(work.name)}
+              onMouseLeave={() => setHoverImg("")}
+            >
+              <Card.Img
+                variant="top"
+                src={require(`${work.image[0]}`)}
+                width="290px"
+                height="200px"
               />
-            )}
-            <Card.Body>
-              <Card.Title style={{ fontSize: "1.5rem" }}>
-                {work.name}
-              </Card.Title>
-              <Card.Text>{work.category.join(" ")}</Card.Text>
-            </Card.Body>
-          </Card>
-        ))}
-      </WorkCards>
+              {hoverImg == work.name && (
+                <img
+                  style={{ position: "absolute", top: "25%", left: "40%" }}
+                  src={work.image.length > 1 ? multiple : expand}
+                  onClick={() => handleShow(work)}
+                />
+              )}
+              <Card.Body>
+                <Card.Title style={{ fontSize: "1.5rem" }}>
+                  {work.name}
+                </Card.Title>
+                <Card.Text>{work.category.join(", ")}</Card.Text>
+              </Card.Body>
+            </Card>
+          ))}
+        </WorkCards>
+      </div>
       <LogoCarousel />
       <BlackBanner />
       <ContactForm />
       <Modal show={show} onHide={handleClose}>
-        <ModalCloseBtn onClick={handleClose}>X</ModalCloseBtn>
+        <ModalCloseBtn onClick={handleClose}>Close</ModalCloseBtn>
         {selectedImg && selectedImg.length > 1 && (
           <Swiper
             modules={[Navigation, Pagination]}

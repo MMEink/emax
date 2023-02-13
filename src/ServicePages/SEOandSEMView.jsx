@@ -11,9 +11,9 @@ import "../css/services-aboutuspage.css";
 import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 import { Helmet } from "react-helmet";
 
-export default function WebDesignAndSEOView() {
+export default function WebDesignAndSEOView({ scrollY }) {
   const [block_section, setBlockSection] = useState(
-    services.find((s) => s.name == "SEO & SEM").blocks
+    services.find((s) => s.name === "SEO & SEM").blocks
   );
   return (
     <Row>
@@ -26,13 +26,15 @@ export default function WebDesignAndSEOView() {
       </Helmet>
       <div className="header services_header">
         <h1 className="pageTitle">SEO & SEM</h1>
-        <div className="arrowContainer">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <HashLink to="#seo-contents">
+          <div className="arrowContainer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </HashLink>
       </div>
-      <ContentsSection>
+      <ContentsSection id="seo-contents">
         <div className="text">
           <ServicesSubheader>Services</ServicesSubheader>
           <h2>Better Page Rankings</h2>
@@ -69,12 +71,12 @@ export default function WebDesignAndSEOView() {
           <img
             src={require(`./images/SEO-Slide-up-Left.png`)}
             alt="image1"
-            className="left_image fadeInUp"
+            className={scrollY > 350 ? "left_image fadeInUp" : "opacityToggle"}
           />
           <img
             src={require(`./images/SEO-Slide-up-Right.png`)}
             alt="image2"
-            className="right_image fadeInUp"
+            className={scrollY > 350 ? "right_image fadeInUp" : "opacityToggle"}
           />
         </div>
       </ContentsSection>

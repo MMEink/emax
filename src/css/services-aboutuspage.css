@@ -12,7 +12,9 @@
     color:#fff;
 }
 
-
+.opacityToggle{
+    opacity: 0;
+}
 .fadeInUp{
     animation-name:  fadeInUp;
     animation-duration: 1s;
@@ -31,7 +33,6 @@
 .seeMorebanner{
     background-color: #444;
     font-size: 1.5rem;
-    text-decoration: underline;
     padding: 1rem;
     text-align: center;
 }
