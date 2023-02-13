@@ -109,7 +109,7 @@ function PortfolioView() {
       <BlackBanner />
       <ContactForm />
       <Modal show={show} onHide={handleClose}>
-        <ModalCloseBtn onClick={handleClose}>Close</ModalCloseBtn>
+        <ModalCloseBtn onClick={handleClose}>close</ModalCloseBtn>
         {selectedImg && selectedImg.length > 1 && (
           <Swiper
             modules={[Navigation, Pagination]}
