@@ -281,7 +281,7 @@ to{
   margin-bottom: 5rem;
   justify-content: center;
   text-align: center;
-  margin-top: 2rem;;
+  margin-top: 6rem;;
 }
 
 .carouselTitle{
@@ -603,6 +603,10 @@ form .btn{
     padding-bottom: rem;
     border-bottom:1px solid #02C1FD;
     border-radius: 0;
+  }
+
+  .page{
+    justify-content: center;
   }
 
   .navbar-logo{

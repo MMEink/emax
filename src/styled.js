@@ -148,7 +148,6 @@ export const WorkCards = styled.div`
   grid-gap: 0.5rem;
   width: 70%;
   margin: auto;
-  margin-bottom: 4rem;
   max-width: 1600px;
   .card {
     width: 90%;
@@ -634,4 +633,11 @@ export const ServicePagesPortfolio = styled.section`
   }
 
  
+`;
+
+export const LoadMoreBtn = styled.button`
+  background-color: transparent;
+  padding: 1rem;
+  border: 1px solid #02c1fd;
+  border-radius: 10px;
 `;

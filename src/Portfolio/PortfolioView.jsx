@@ -1,16 +1,17 @@
 import BlackBanner from "../BlackBanner";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Scrollbar } from "swiper";
-import { Row, Card, Modal, Button } from "react-bootstrap";
+import { Row, Card, Modal, Pagination as Page } from "react-bootstrap";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ContactForm from "../ContactForm";
-import { WorkCards, WorkCardsNav, ModalCloseBtn } from "../styled";
+import { WorkCards, WorkCardsNav, ModalCloseBtn, LoadMoreBtn } from "../styled";
 import { portfolio_data } from "../data";
 import LogoCarousel from "../LogoCarousel";
 import multiple from "./images/image-multiple-svgrepo-com.svg";
 import expand from "./images/resize-svgrepo-com.svg";
 import { HashLink } from "react-router-hash-link";
+import { useEffect } from "react";
 
 function PortfolioView() {
   const category = [
@@ -27,6 +28,27 @@ function PortfolioView() {
   const [hoverImg, setHoverImg] = useState("");
   const [selectedImg, setSelectedImg] = useState([]);
   const [show, setShow] = useState(false);
+  let temp = 1;
+  const [active, setActive] = useState(temp);
+  let items = [];
+  let listLength = portfolioData.length / 6 >= 1 ? portfolioData.length / 6 : 1;
+
+  for (let number = 1; number <= listLength; number++) {
+    items.push(
+      <Page.Item
+        key={number}
+        active={number === active}
+        onClick={() => {
+          if (window.innerWidth < 600) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+          setActive(number);
+        }}
+      >
+        {number}
+      </Page.Item>
+    );
+  }
 
   const handleClose = () => {
     setShow(false);
@@ -46,8 +68,6 @@ function PortfolioView() {
       setPortfolioData(portfolio_data);
     }
   };
-
-  console.log(portfolioData);
 
   return (
     <Row>
@@ -70,7 +90,7 @@ function PortfolioView() {
           ))}
         </WorkCardsNav>
         <WorkCards>
-          {portfolioData.map((work, i) => (
+          {portfolioData.slice((active - 1) * 6, active * 6)?.map((work, i) => (
             <Card
               key={i}
               style={{
@@ -104,6 +124,21 @@ function PortfolioView() {
             </Card>
           ))}
         </WorkCards>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <p>
+            Showing{" "}
+            {portfolioData.length >= 6 ? 6 * active : portfolioData.length} of{" "}
+            {portfolioData.length}
+          </p>
+          <Page>{items}</Page>
+        </div>
       </div>
       <LogoCarousel />
       <BlackBanner />
