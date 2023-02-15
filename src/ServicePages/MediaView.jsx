@@ -10,8 +10,11 @@ import { portfolio_data, services } from "../data";
 import "../css/services-aboutuspage.css";
 import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 import { Helmet } from "react-helmet";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function MediaView({ scrollY }) {
+  Aos.init();
   const [block_section, setBlockSection] = useState(
     services.find((s) => s.name === "Photography & Videos").blocks
   );
@@ -70,14 +73,20 @@ export default function MediaView({ scrollY }) {
           <img
             src={require(`./images/photography-Videos-Left.png`)}
             alt="image1"
-            className={
-              scrollY > 350 ? "left_image fadeInUp clearEdge" : "opacityToggle"
-            }
+            data-aos="fadeInUp"
+            data-aos-delay="1500"
+            data-aos-duration="2500"
+            data-aos-once="true"
+            className="left_image clearEdge"
           />
           <img
             src={require(`./images/photography-Videos-Right.png`)}
             alt="image2"
-            className={scrollY > 350 ? "right_image fadeInUp" : "opacityToggle"}
+            data-aos="fadeInUp"
+            data-aos-delay="500"
+            data-aos-duration="2500"
+            data-aos-once="true"
+            className="right_image"
           />
         </div>
       </ContentsSection>

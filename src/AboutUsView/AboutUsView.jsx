@@ -9,8 +9,11 @@ import placeholder_lf from "../ServicePages/images/Web-New-Left.png";
 import placeholder_rt from "../ServicePages/images/Web-New-Right.png";
 import "../css/services-aboutuspage.css";
 import { ContentsSection, WaveButton } from "../styled";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function AboutUsView() {
+  Aos.init();
   return (
     <Row>
       <div className="header aboutPg">
@@ -54,12 +57,20 @@ function AboutUsView() {
           <img
             src={placeholder_lf}
             alt="image1"
-            className="left_image fadeInUp"
+            data-aos="fadeInUp"
+            data-aos-delay="1500"
+            data-aos-duration="2500"
+            data-aos-once="true"
+            className="left_image"
           />
           <img
             src={placeholder_rt}
             alt="image2"
-            className="right_image fadeInUp"
+            data-aos="fadeInUp"
+            data-aos-delay="500"
+            data-aos-duration="2500"
+            data-aos-once="true"
+            className="right_image"
           />
         </div>
       </ContentsSection>

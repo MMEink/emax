@@ -22,12 +22,18 @@
     animation-fill-mode: both
 }
 
-.left_image{
-    animation-delay: 1.5s;
+.images div{
+    opacity: 0;
+} 
+
+[data-aos="fadeInUp"] {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
 }
 
-.right_image{
-    animation-delay: 1s;
+[data-aos="fadeInUp"] .aos-animate {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
 }
 
 .seeMorebanner{

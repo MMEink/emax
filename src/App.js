@@ -18,23 +18,20 @@ import { Row, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./css/App.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  Aos.init();
   const [visible, setVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   function logit() {
-    setScrollY(window.pageYOffset);
-  }
-
-  useEffect(() => {
-    function watchScroll() {
-      window.addEventListener("scroll", logit);
+    if (window.pageYOffset > 350) {
+      setScrollY(window.pageYOffset);
     }
-    watchScroll();
-    return () => {
-      window.removeEventListener("scroll", logit);
-    };
-  }, []);
+  }
+  window.addEventListener("scroll", logit);
+
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
 

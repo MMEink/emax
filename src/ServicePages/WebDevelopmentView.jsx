@@ -10,8 +10,11 @@ import { portfolio_data, services } from "../data";
 import "../css/services-aboutuspage.css";
 import { ContentsSection, ServicesSubheader, WaveButton } from "../styled";
 import { Helmet } from "react-helmet";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-export default function WebDevelopmentView({ scrollY }) {
+export default function WebDevelopmentView() {
+  Aos.init();
   const [block_section, setBlockSection] = useState(
     services.find((s) => s.name === "Web Development").blocks
   );
@@ -62,7 +65,7 @@ export default function WebDevelopmentView({ scrollY }) {
           <HashLink to="#contact">
             <WaveButton>
               <span>Get Started</span>
-              <div class="wave"></div>
+              <div className="wave"></div>
             </WaveButton>
           </HashLink>
         </div>
@@ -70,12 +73,20 @@ export default function WebDevelopmentView({ scrollY }) {
           <img
             src={require(`./images/Web-New-Left.png`)}
             alt="image1"
-            className={scrollY > 350 ? "left_image fadeInUp" : "opacityToggle"}
+            data-aos="fadeInUp"
+            data-aos-delay="1500"
+            data-aos-duration="2500"
+            data-aos-once="true"
+            className="left_image"
           />
           <img
             src={require(`./images/Web-New-Right.png`)}
             alt="image2"
-            className={scrollY > 350 ? "right_image fadeInUp" : "opacityToggle"}
+            data-aos="fadeInUp"
+            data-aos-delay="500"
+            data-aos-duration="2500"
+            data-aos-once="true"
+            className="right_image"
           />
         </div>
       </ContentsSection>
