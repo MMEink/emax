@@ -137,7 +137,7 @@ function PortfolioView() {
             {portfolioData.length >= 6 ? 6 * active : portfolioData.length} of{" "}
             {portfolioData.length}
           </p>
-          <Page>{items}</Page>
+          {portfolioData.length > 6 && <Page>{items}</Page>}
         </div>
       </div>
       <LogoCarousel />
