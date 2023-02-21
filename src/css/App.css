@@ -9,6 +9,12 @@
   --bs-gutter-x:0;
 }
 
+.btnfocus{
+  background-color: #02c1fd;
+  border-color: #02c1fd !important;
+  color: white !important;
+}
+
 .pageTitle{
   z-index: 999;
     position: relative;
@@ -24,26 +30,31 @@ a {
   color: black;
 }
 .header{
-  padding: 15rem;
   background-color: grey;
+
+}
+
+.header-contents{
+  margin: 15rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem;
 }
 .aboutPg{
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 85%/100% url(../images/pexels-pixabay-461064.jpg)
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 85%/100% url(../images/about-us-header.jpg)
 }
 
 .contactPg{
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 50%/100% url(../images/pexels-andrew-neel-6633920.jpg)
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 50%/100% url(../images/contact-us-header.jpg)
 }
 
 .servicesPg{
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 50%/100% url(../images/pexels-tranmautritam-251225.jpg)
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 50%/100% url(../images/services-header.jpg)
 }
 
 .portfolioPg{
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 50%/100% url(../images/pexels-mister-mister-2442888.jpg)
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ) , no-repeat 25% 50%/100% url(../images/portfolio-header.jpg)
 }
 .bg-overlay{
   background: transparent url(../images/07.png) center center repeat;
@@ -82,6 +93,15 @@ a {
 .greyBg{
   background-color: grey;
   width: 50%;
+}
+
+.active>.page-link{
+  background-color: #02C1FD;
+    border-color: #02C1FD;
+}
+
+.page-link{
+  color:#02C1FD;
 }
 
 @keyframes animate{
@@ -123,7 +143,7 @@ color: red;
   align-items: center;
   justify-content: space-between;
   justify-items: flex-end;
-  width: 100%;
+  width: 80%;
   background-color: white;
   margin: 0 1rem;
 }
@@ -332,6 +352,10 @@ padding: 1rem;
 font-weight: 500;
 }
 
+.card-body{
+  text-align: center;
+}
+
 .card-title{
 font-weight: 800;
 font-size: 1.8rem;
@@ -479,7 +503,7 @@ form h3{
 
 .modal{
   max-width: 2000px;
-  overflow: hidden;
+  overflow: scroll;
   --bs-modal-width: 100%;
 }
 
@@ -487,7 +511,8 @@ form h3{
 background-color: transparent;
 border: none;
 border-radius: none;
-top: 4rem;
+top: 8rem;
+right: 2rem;
 }
 
 .portfolio_swiper .swiper-button-prev, .portfolio_swiper .swiper-button-next{
@@ -495,7 +520,7 @@ top: 4rem;
 }
 
 .portfolio_swiper .swiper-slide{
-  right: -21rem;
+  right: -20%;
 }
 
 .portfolio_swiper{
@@ -521,6 +546,11 @@ form .btn{
 }
 
 @media all and (max-width:1400px) {
+  .header-contents{
+    margin: 10rem auto;
+
+  }
+
 .slogan{
   left: 6%;
 } 
@@ -534,6 +564,11 @@ form .btn{
 }
 
 @media all and (max-width: 600px)  {
+  .header-contents{
+    margin: 4rem auto !important;
+    padding: 0;
+
+  }
 
   .modal_singleImg{
     width: 100%;
@@ -560,19 +595,16 @@ form .btn{
     height: 15px;
   }
 
-  .header{
-    padding: 4rem;
-  }
-
   .bg-overlay{
     height: 47%;
   }
 
   .pageTitle{
     font-size: 1.5rem;
+    margin-left: 2rem;
   }
 
-  .main-nav, .bannerContent{
+.bannerContent{
     width: 80%;
   }
 
@@ -713,7 +745,24 @@ form .btn{
     margin-left: 0;
   }
   }
+
+  @media all and (max-width: 500px)  {
+    .header-contents{
+      margin: 2.8rem auto !important;
+    }
+    
+  }
+  @media all and (max-width:800px) {
+    .header-contents{
+      margin: 7rem auto;
+  
+    }
+  }
+
   @media all and (max-width:1200px) and (min-width:601px){
+    .header-contents{
+      padding: 0;
+    }
 
     .card-title{
       font-size: 1.5rem;
@@ -721,10 +770,6 @@ form .btn{
 
     .modal_singleImg{
       width: 60%;
-    }
-
-    .header{
-      padding: 11rem;
     }
 
     .bg-overlay{
@@ -759,7 +804,7 @@ form .btn{
     }
 
     .main-nav{
-      width: 100%;
+      width: 90%;
       padding: 0 0.5rem;
       margin: 0;
 

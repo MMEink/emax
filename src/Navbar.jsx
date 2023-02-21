@@ -1,14 +1,18 @@
 import logo from "./images/E-MaxHorizontal.svg";
-import { Navbar, Nav, Button, Row } from "react-bootstrap";
+import { Navbar, Button } from "react-bootstrap";
 import plane from "./images/plane.svg";
 import arrow from "./images/1522547488.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { DropdownArrow, DropdownContainer, NavBtnContainer } from "./styled";
+import {
+  DropdownArrow,
+  DropdownContainer,
+  NavBtnContainer,
+  SmallWaveButton,
+} from "./styled";
 import { services } from "./data";
 
 export default function NavbarView() {
-  const [colorChange, setColorChange] = useState(false);
   const [dropdownToggle, setDropdownToggle] = useState(false);
   const [expanded, setExpanded] = useState(false);
   let filter = {
@@ -87,6 +91,7 @@ export default function NavbarView() {
                           setDropdownToggle(false);
                           setExpanded(false);
                         }}
+                        key={i}
                       >
                         <li key={i}>{service.name}</li>
                       </Link>
@@ -105,18 +110,11 @@ export default function NavbarView() {
           </NavBtnContainer>
           <Link to={"/contact"} onClick={() => setExpanded(false)}>
             <div>
-              <Button
-                className="contactBtn"
-                onMouseEnter={() => setColorChange(true)}
-                onMouseLeave={() => setColorChange(false)}
-              >
+              <SmallWaveButton>
                 <span>contact</span>
-                <img
-                  src={plane}
-                  alt="planeIcon"
-                  style={colorChange ? filter : {}}
-                />
-              </Button>
+                <img src={plane} alt="planeIcon" style={filter} />
+                <div className="wave"></div>
+              </SmallWaveButton>
             </div>
           </Link>
         </Navbar.Collapse>

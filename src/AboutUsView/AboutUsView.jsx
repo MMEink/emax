@@ -17,14 +17,16 @@ function AboutUsView() {
   return (
     <Row>
       <div className="header aboutPg">
-        <h1 className="pageTitle">About Us</h1>
-        <HashLink to="#aboutuspage-contents">
-          <div className="arrowContainer">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </HashLink>
+        <div className="header-contents">
+          <h1 className="pageTitle">About Us</h1>
+          <HashLink to="#aboutuspage-contents">
+            <div className="arrowContainer">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </HashLink>
+        </div>
       </div>
       <ContentsSection id="aboutuspage-contents">
         <div className="text" style={{ marginTop: "3rem" }}>
@@ -74,7 +76,6 @@ function AboutUsView() {
           />
         </div>
       </ContentsSection>
-      <PortfolioSection portfolio={portfolio_data.slice(0, 8)} />
       <LogoCarousel />
       <BlackBanner />
       <ContactForm />

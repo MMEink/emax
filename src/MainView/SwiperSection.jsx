@@ -1,18 +1,17 @@
-import { Pagination, Autoplay, EffectFade } from "swiper";
+import { Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slide1DT from "../images/AdobeStock_29133877.jpg";
-import slide1MB from "../images/AdobeStock_29133877-mb.jpg";
-import slide2DT from "../images/AdobeStock_192123927.jpg";
-import slide2MB from "../images/AdobeStock_192123927-mb.jpg";
-import slide3DT from "../images/nyc-sunset.jpg";
-import slide3MB from "../images/nyc-sunset-mb.jpg";
+import slide1DT from "../images/home-hero-1.jpg";
+import slide1MB from "../images/home-hero-mb-1.jpg";
+import slide2DT from "../images/home-hero-2.jpg";
+import slide2MB from "../images/home-hero-mb-2.jpg";
+import slide3DT from "../images/home-hero-3.jpeg";
+import slide3MB from "../images/home-hero-mb-3.jpg";
 //site css imports below
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
-import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 
 export default function SwiperSection() {

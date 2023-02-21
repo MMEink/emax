@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import placeholder from "./images/webDesign-placeholder.jpg";
 
 export const DropdownArrow = styled.div`
   width: 15px;
@@ -144,13 +143,13 @@ export const ServiceImgFrame = styled.div`
 
 export const WorkCards = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
   width: 70%;
   margin: auto;
   max-width: 1600px;
+  grid-gap: 10px;
   .card {
-    width: 90%;
+    width: 100%;
   }
   .card:hover .card-img-top {
     filter: brightness(0.7);
@@ -160,9 +159,9 @@ export const WorkCards = styled.div`
   }
 
   @media all and (max-width: 1200px) and (min-width: 601px) {
-    grid-gap: 0;
-    width: 100%;
-    margin: 1rem;
+    grid-gap: 10px;
+    width: 95%;
+    margin: auto;
   }
 
   @media all and (max-width: 600px) {
@@ -181,17 +180,22 @@ export const WorkCardsNav = styled.ul`
     cursor: pointer;
     display: inline-block;
     border-right: 1px;
+
+    &:hover {
+      color: #02c1fd;
+    }
+
+    &::after {
+      content: "";
+      background-color: #02c1fd;
+      border-color: #02c1fd;
+      color: white;
+    }
   }
   justify-content: center;
   margin: 2rem auto;
   text-align: center;
   padding-left: 0;
-
-  li:hover,
-  li::after {
-    background-color: #52a7b0;
-    color: white;
-  }
 
   li:first-child {
     border-top-left-radius: 5px;
@@ -204,9 +208,7 @@ export const WorkCardsNav = styled.ul`
     border-bottom-right-radius: 5px;
   }
 
-  @media all and (max-width: 1400px) {
-    font-size: 0.7rem;
-
+  @media all and (max-width: 1200px) {
     li {
       border: none;
       padding: 0.5rem;
@@ -291,6 +293,96 @@ export const WaveButton = styled.a`
   @media all and (max-width: 1200px) {
     width: 230px;
 
+    span {
+      font-size: 12px;
+    }
+  }
+`;
+
+export const SmallWaveButton = styled.a`
+  width: 200px;
+  padding: 15px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
+
+  &:hover .wave {
+    top: -150px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-wrap: none;
+    margin-right: 0.5rem;
+  }
+  .wave {
+    width: 200px;
+    height: 250px;
+    background-color: #02c1fd;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: -80px;
+    transition: 0.4s;
+  }
+
+  img {
+    z-index: 999;
+    position: absolute;
+    top: 18px;
+  }
+
+  .wave::before,
+  .wave::after {
+    width: 200%;
+    height: 200%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+
+  .wave::before {
+    border-radius: 45%;
+    background-color: #04b1e6;
+    animation: wave 10s linear infinite;
+  }
+
+  .wave::after {
+    border-radius: 40%;
+    background-color: rgba(20, 20, 20, 0.5);
+    animation: wave 15s linear infinite;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translate(-50%, -75%) rotate(-40deg);
+    }
+    50% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(-40deg);
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+    width: 200px;
+    margin-bottom: 1rem;
     span {
       font-size: 12px;
     }
@@ -391,8 +483,13 @@ export const ContentsSection = styled.div`
 
     .left_image {
       left: 6rem;
-      max-width: 800px;
+      max-width: 750px;
     }
+
+    .right_image {
+      max-width: 700px;
+    }
+
     .paragraph {
       font-size: 0.9rem;
     }
@@ -426,7 +523,7 @@ export const ContentsSection = styled.div`
     }
     .right_image {
       width: 90%;
-      top: 80rem;
+      top: 67rem;
     }
   }
 
@@ -552,19 +649,25 @@ export const ServicePagesPortfolio = styled.section`
 
   .portfolioCard:hover .coverImg{
     filter: brightness(0.7);
-    top:-100px;
+    top:-50px;
     transition: all 0.3s ease-in-out;
   }
   .infoBar{
     z-index:999;
     position:absolute;
     background-color:white;
-    top:80%;
+    top:85%;
     width:100%;
     height:auto;
+    text-align:center;
     padding:1rem;
     transform:translateY(100%);
     transition: all 0.3s ease-in-out;
+    
+  }
+  .infoBar h4{
+    font-size:1rem;
+    font-weight:600
   }
 
   .hovered{
@@ -574,65 +677,51 @@ export const ServicePagesPortfolio = styled.section`
   div {
     position: relative;
     overflow: hidden;
-    height: 275px;
    .coverImg {
       position: relative;
-      top: -27px;
+      top: 0;
       width: 100%;
       height: auto;
-      min-height: 302px;
     }
   }
 
-  @media all and (max-width: 1400px) {
-    div{
-     .coverImg {
-        top: -18px;
-      }
+  @media all and (max-width: 1600px) {
+    .infoBar{
+      top:80%;
+
     }
   }
 
   @media all and (max-width: 1250px) {
     div {
-      height: 240px;
-     .coverImg {
-        top: -10px;
-        min-height: 250px;
-      }
-
       .infoBar{
         top:72%;
       }
   }
+}
 
-  @media all and (max-width: 1000px) {
-    grid-template-columns: repeat(3, 1fr);
-    div {
-     .coverImg {
-        top: -8px;
-      }
-  }
+@media all and (max-width: 800px) {
+div .infoBar{
+  top:55%;
+}
+
+}
 
   @media all and (max-width: 750px) {
     grid-template-columns: repeat(2, 1fr);
-    div {
-      height: 200px;
-     .coverImg {
-        top: -20px;
-        min-height: 220px;
-      }
+  div .infoBar{
+    top:70%;
   }
-
-  @media all and (max-width: 450px) {
-    div {
-      height: 180px;
-     .coverImg {
-        top: -10px;  
-        min-height: 200px;    
-      }
-  }
-
+}
  
+@media all and (max-width: 450px) {
+  div .infoBar{
+    top:50%;
+  }
+.portfolioCard:hover .coverImg{
+  top:-30px;
+}
+}
 `;
 
 export const LoadMoreBtn = styled.button`

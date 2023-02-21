@@ -6,7 +6,6 @@ import "swiper/css/bundle";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 export default function LogoCarousel() {
   const logoSlides = [

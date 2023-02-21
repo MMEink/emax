@@ -1,4 +1,4 @@
-import { Nav, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
 export default function BlackBanner() {
   return (

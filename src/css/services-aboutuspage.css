@@ -1,8 +1,37 @@
-.services_header{
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/branding-header.jpg);
+.brand_header{
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/branding-header.jpeg);
         
 }
 
+.web_header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/web-dev-header.jpeg);
+    
+}
+
+.seo_header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/seo-sem-header.jpeg);
+    
+}
+
+.media_header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/photo-video-header.jpeg);
+    
+}
+
+.email_header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/email-marketing-header.jpeg);
+    
+}
+
+.print_header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/printing-header.jpeg);
+    
+}
+
+.social_header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , no-repeat 25% 40%/100% url(../ServicePages/images/social-media-header.jpeg);
+    
+}
 .services_header .pageTitle{
     color:#02C1FD;
     text-transform: uppercase;
@@ -21,6 +50,7 @@
     animation-iteration-count: 1;
     animation-fill-mode: both
 }
+
 
 .images div{
     opacity: 0;

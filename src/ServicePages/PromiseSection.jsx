@@ -6,7 +6,7 @@ export default function PromiseSection({ block_section }) {
       <div className="promiseContainer">
         {block_section.map((b, i) => (
           <div key={i}>
-            <img src={require(`${b.icon}`)} />
+            <img src={require(`${b.icon}`)} alt="Icon" />
             <p style={{ lineHeight: "1.8rem" }}>{b.describe}</p>
           </div>
         ))}
