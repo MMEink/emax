@@ -37,6 +37,9 @@ inside pages for each services in the service home page. Content in here is not 
 ### src/images
 images needed for shared components/sections. For instace, logo carousel, navbar......
 
+## Some React Tips
+1. require() sources are not very useful with source location ../ Try to use ./ all the time. Move the folder to the closet location if needed
+2. Styles could be difficult to locate because there is many places but using dev tool in the browser can easily locate them. Element with a non-sense class is the ones created in style.js file. 
 
 ## Available Scripts
 In the project directory, you can run:

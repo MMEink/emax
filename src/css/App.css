@@ -264,7 +264,7 @@ to{
 .slogan h2{
   text-transform: uppercase;
   width: 55%;
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   min-width: 1200px
@@ -550,10 +550,15 @@ form .btn{
     margin: 10rem auto;
 
   }
-
+  .navbar{
+  max-height: 300px;
+  }
 .slogan{
-  left: 6%;
+  left: 12%;
 } 
+.slogan h2{
+  font-size: 4.5rem;
+}
 .card-text, .aboutUs p{
   font-size: 0.8rem;
 } 

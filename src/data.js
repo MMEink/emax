@@ -277,7 +277,7 @@ export const portfolio_data = [
     image: ["./images/portfolio/branding/6-infuso-pops/infuso-pops-lg.jpg"],
   },
   {
-    name: "Tardis Catering",
+    name: "Tardi's Catering",
     category: ["Branding"],
     thumbnail:
       "./images/portfolio/branding/7-tardis-catering/tardis-catering-sm.jpg",
@@ -286,7 +286,7 @@ export const portfolio_data = [
     ],
   },
   {
-    name: "Williamsbury Opera House",
+    name: "Williamsburg Opera House",
     category: ["Branding"],
     thumbnail:
       "./images/portfolio/branding/8-williamsburg-opera-house/opera-house-sm.jpg",
@@ -295,19 +295,19 @@ export const portfolio_data = [
     ],
   },
   {
-    name: "48 Save",
+    name: "Save at 48 Wall Street",
     category: ["Email Marketing"],
     thumbnail: "./images/portfolio/email-marketing/1-48-save-sm.jpg",
     image: ["./images/portfolio/email-marketing/1-48-save-lg.jpg"],
   },
   {
-    name: "48 Wall St",
+    name: "48 Wall Promo",
     category: ["Email Marketing"],
     thumbnail: "./images/portfolio/email-marketing/2-48wall-sm.jpg",
     image: ["./images/portfolio/email-marketing/2-48wall-lg.jpg"],
   },
   {
-    name: "441 Vintage",
+    name: "441 Vintage Promo",
     category: ["Email Marketing"],
     thumbnail: "./images/portfolio/email-marketing/3-441vinatge-sm.jpg",
     image: ["./images/portfolio/email-marketing/3-441vinatge-lg.jpg"],
@@ -319,19 +319,19 @@ export const portfolio_data = [
     image: ["./images/portfolio/email-marketing/4-fashion-week-lg.jpg"],
   },
   {
-    name: "La Fine Memorial",
+    name: "La Fine Memorial Day",
     category: ["Email Marketing"],
     thumbnail: "./images/portfolio/email-marketing/5-lafine-memorial-sm.jpg",
     image: ["./images/portfolio/email-marketing/5-lafine-memorial-lg.jpg"],
   },
   {
-    name: "Santa",
+    name: "Sit Down With Santa Promo",
     category: ["Email Marketing"],
     thumbnail: "./images/portfolio/email-marketing/6-santa-sm.jpg",
     image: ["./images/portfolio/email-marketing/6-santa-lg.jpg"],
   },
   {
-    name: "Nassau County",
+    name: "NCMOA Events Promo",
     category: ["Email Marketing"],
     thumbnail: "./images/portfolio/email-marketing/7-nassau-county-sm.jpg",
     image: ["./images/portfolio/email-marketing/7-nassau-county-lg.jpg"],
@@ -362,7 +362,7 @@ export const portfolio_data = [
     image: ["./images/portfolio/email-marketing/11-mme-management-lg.jpg"],
   },
   {
-    name: "Daylight",
+    name: "Daylight Studios Promo",
     category: ["Email Marketing"],
     thumbnail: "./images/portfolio/email-marketing/12-daylight-sm.jpg",
     image: ["./images/portfolio/email-marketing/12-daylight-lg.jpg"],
@@ -392,7 +392,7 @@ export const portfolio_data = [
     image: ["./images/portfolio/email-marketing/16-mme-holiday-lg.jpg"],
   },
   {
-    name: "441 Video",
+    name: "441 Vintage Video",
     category: ["Media"],
     video: true,
     thumbnail: "./images/portfolio/media/441-vintage-video/441-video-sm.jpg",
@@ -400,7 +400,7 @@ export const portfolio_data = [
     latest: true,
   },
   {
-    name: "Fis",
+    name: "FIS Conference Photos",
     category: ["Media"],
     thumbnail: "./images/portfolio/media/fis/1-fis-sm.jpg",
     image: [
@@ -411,7 +411,7 @@ export const portfolio_data = [
   },
 
   {
-    name: "441 Vintage",
+    name: "441 Vintage Photos",
     category: ["Media"],
     thumbnail: "./images/portfolio/media/3-441/1-441-sm.jpg",
     image: [
@@ -537,7 +537,7 @@ export const portfolio_data = [
     redirect_link: "https://www.48wallnyc.com/48wall-brochure.html",
   },
   {
-    name: "441 Postcard",
+    name: "441 Vintage Postcard",
     category: ["Print Marketing"],
     thumbnail:
       "./images/portfolio/printing/3-441-postcard/441-vintage-postcard-sm.jpg",
@@ -554,7 +554,7 @@ export const portfolio_data = [
     redirect_link: "https://www.mmeink.com/mmeink-brochure.html",
   },
   {
-    name: "Camus Bar",
+    name: "Camus Bar Graphic",
     category: ["Print Marketing"],
     thumbnail: "./images/portfolio/printing/5-camus-bar/camus-bar-sm.jpg",
     image: ["./images/portfolio/printing/5-camus-bar/camus-bar-lg.jpg"],
@@ -571,7 +571,7 @@ export const portfolio_data = [
     ],
   },
   {
-    name: "Michelob Ultra",
+    name: "Michelob Ultra Bar Graphic",
     category: ["Print Marketing"],
     thumbnail:
       "./images/portfolio/printing/7-michelob-ultra/michelob-ultra-bar-sm.jpg",
@@ -580,13 +580,13 @@ export const portfolio_data = [
     ],
   },
   {
-    name: "Fis",
+    name: "FIS Stage Wall",
     category: ["Print Marketing"],
     thumbnail: "./images/portfolio/printing/8-fis/fis-wall-sm.jpg",
     image: ["./images/portfolio/printing/8-fis/fis-wall-lg.jpg"],
   },
   {
-    name: "48 Wall IG",
+    name: "48 Wall Social Reel",
     category: ["Social Media"],
     thumbnail: "./images/portfolio/social-media/1-48-Wall-IG/48-ad-sm.jpg",
     image: [
@@ -602,7 +602,7 @@ export const portfolio_data = [
     ],
   },
   {
-    name: "Cena Negra Teaser Video",
+    name: "Cena Negra Teaser Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -611,7 +611,7 @@ export const portfolio_data = [
     latest: true,
   },
   {
-    name: "Hollywood Props Video",
+    name: "Holly Props Social Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -619,7 +619,7 @@ export const portfolio_data = [
     video_link: "https://player.vimeo.com/video/800638308?h=a54887c766",
   },
   {
-    name: "Super Bowl Video",
+    name: "Super Bowl Services Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -628,7 +628,7 @@ export const portfolio_data = [
     latest: true,
   },
   {
-    name: "Artistry Video",
+    name: "Artistry Promo Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -636,14 +636,14 @@ export const portfolio_data = [
     video_link: "https://player.vimeo.com/video/800639892?h=9a0e90f384",
   },
   {
-    name: "441 Video",
+    name: "441 Vintage Promo Reel",
     category: ["Social Media"],
     video: true,
     thumbnail: "./images/portfolio/social-media/6-441/441-social-reel-sm.jpg",
     video_link: "https://player.vimeo.com/video/800640955?h=3f632fb465",
   },
   {
-    name: "Fashion Mirrors",
+    name: "Fashion Rental Promo Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -651,7 +651,7 @@ export const portfolio_data = [
     video_link: "https://player.vimeo.com/video/788837586?h=033fdc2074",
   },
   {
-    name: "La Fine Columbus IG",
+    name: "La Fine Columbus Day Instagram",
     category: ["Social Media"],
     thumbnail:
       "./images/portfolio/social-media/8-La-Fine-Columbus-IG/la-fine-columbus-ig-sm.jpg",
@@ -660,7 +660,7 @@ export const portfolio_data = [
     ],
   },
   {
-    name: "March Madness IG",
+    name: "March Madness IG Promo",
     category: ["Social Media"],
     thumbnail:
       "./images/portfolio/social-media/9-March-Madness-IG/march-madness-ig-sm.jpg",
@@ -669,7 +669,7 @@ export const portfolio_data = [
     ],
   },
   {
-    name: "Answer the Call Video",
+    name: "Answer The Call Highlight Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -677,7 +677,7 @@ export const portfolio_data = [
     video_link: "https://player.vimeo.com/video/800642427?h=e384627d81",
   },
   {
-    name: "Home Decor Video",
+    name: "Holiday Prop Services Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -685,7 +685,7 @@ export const portfolio_data = [
     video_link: "https://player.vimeo.com/video/800643181?h=186ad73e76",
   },
   {
-    name: "Halloween Video",
+    name: "Halloween Event Highlight Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -693,7 +693,7 @@ export const portfolio_data = [
     video_link: "https://player.vimeo.com/video/800644027?h=9b7eae6737",
   },
   {
-    name: "Custom Fabrication Video",
+    name: "Fabrication Services Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -701,7 +701,7 @@ export const portfolio_data = [
     video_link: "https://player.vimeo.com/video/800645564?h=94f58b5595",
   },
   {
-    name: "Midtown Veranda IG",
+    name: "Midtown Veranda Instagram Promo",
     category: ["Social Media"],
     thumbnail:
       "./images/portfolio/social-media/14-Midtown-Veranda-IG/midtown-vernada-ig-sm.jpg",
@@ -710,7 +710,7 @@ export const portfolio_data = [
     ],
   },
   {
-    name: "Fall In Love Video",
+    name: "Wedding Special Promo Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -718,7 +718,7 @@ export const portfolio_data = [
     video_link: "https://player.vimeo.com/video/800646995?h=8d4d863263",
   },
   {
-    name: "Fashion Week Video",
+    name: "Fashion Week Highlight Reel",
     category: ["Social Media"],
     video: true,
     thumbnail:
@@ -732,13 +732,13 @@ export const portfolio_data = [
     redirect_link: "https://www.48wallnyc.com/",
   },
   {
-    name: "Venues",
+    name: "MME Venue Management",
     category: ["Web Development"],
     thumbnail: "./images/portfolio/branding/web-dev/2-venues-web-dev.jpg",
     redirect_link: "https://www.mmevenues.com/",
   },
   {
-    name: "NYC",
+    name: "Event Space NYC",
     category: ["Web Development"],
     thumbnail: "./images/portfolio/branding/web-dev/3-nyc-web-dev.jpg",
     redirect_link: "https://www.eventvenuenyc.com/",
@@ -756,14 +756,14 @@ export const portfolio_data = [
     redirect_link: "https://www.eventsatartistry.com/",
   },
   {
-    name: "Mikey Mike",
+    name: "Mikey Mike Events",
     category: ["Web Development"],
     thumbnail: "./images/portfolio/branding/web-dev/6-mikey-web-dev.jpg",
     redirect_link: "https://www.mikeymikeevents.com/",
     latest: true,
   },
   {
-    name: "Rental",
+    name: "Event Decor Rentals",
     category: ["Web Development"],
     thumbnail: "./images/portfolio/branding/web-dev/7-rental-web-dev.jpg",
     redirect_link: "https://www.eventdecorrentals.com/",

@@ -9,12 +9,22 @@ export default function ContactForm() {
           Just a phone call away, our professionals are ready to assist you with
           our creative ideas and options here at<span> E-Max</span>.
         </h5>
-        <div className="smallText smallBold address">
+        <div className="xsmallText smallBold address">
           CORPORATE HEADQUARTERS <br />
           140 Florida Street <br />
           Farmingdale NY <br />
           (877) 885-0705
         </div>
+
+        <h3
+          style={{
+            fontSize: "3rem",
+            textTransform: "capitalize",
+            marginTop: "3rem",
+          }}
+        >
+          let's connect!
+        </h3>
       </div>
       <Form
         action="https://crm.zoho.com/crm/WebForm"
@@ -53,7 +63,7 @@ export default function ContactForm() {
           readOnly
         ></input>
         <div className="formTitleContainer">
-          <h3 className="zcwf_title">let's connect!</h3>
+          <h3 className="zcwf_title">Contact Us Info</h3>
         </div>
         <Form.Group className="mb-3 zcwf_row" controlId="NAME">
           <Form.Label className="zcwf_col_lab">
