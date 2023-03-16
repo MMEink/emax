@@ -502,7 +502,7 @@ form h3{
 }
 
 .modal{
-  max-width: 2000px;
+  width: 100%;
   overflow: scroll;
   --bs-modal-width: 100%;
 }
