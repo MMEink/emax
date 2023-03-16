@@ -390,16 +390,16 @@ export const SmallWaveButton = styled.a`
 `;
 
 export const ModalCloseBtn = styled.button`
-  width: 10%;
+  width: 8%;
   font-size: 1.5rem;
   background: none;
-  border: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
   color: #fff;
   position: absolute;
   top: -80px;
   right: 0;
   font-weight: 500;
-  text-decoration: underline;
 
   @media all and (max-width: 1200px) and (min-width: 601px) {
     top: -150px;

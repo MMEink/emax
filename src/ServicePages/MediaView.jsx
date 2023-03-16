@@ -18,7 +18,7 @@ export default function MediaView() {
     Aos.init();
   }, []);
   const block_section = services.find(
-    (s) => s.name === "Photography & Videos"
+    (s) => s.name === "Photography & Video"
   ).blocks;
   return (
     <HelmetProvider>
@@ -34,7 +34,7 @@ export default function MediaView() {
         </Helmet>
         <div className="header services_header media_header">
           <div className="header-contents">
-            <h1 className="pageTitle">Photography & Videos</h1>
+            <h1 className="pageTitle">Photography & Video</h1>
             <HashLink to="#media-contents">
               <div className="arrowContainer">
                 <span></span>

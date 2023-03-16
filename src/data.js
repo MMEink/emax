@@ -33,7 +33,7 @@ export const services = [
   },
   {
     link: "media",
-    name: "Photography & Videos",
+    name: "Photography & Video",
     title: "Photography & Video Services",
     subtitle: "Represent Your Brand",
     hp_describe:
