@@ -45,10 +45,7 @@
     opacity: 0;
 }
 .fadeInUp{
-    animation-name:  fadeInUp;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both
+
 }
 
 
@@ -85,13 +82,18 @@
     }
 }
 @keyframes fadeInUp {
-    from {
+    0% {
 		opacity: 0;
 		-webkit-transform: translate3d(0, 100%, 0);
 		transform: translate3d(0, 100%, 0);
 	}
+    50% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 50%, 0);
+		transform: translate3d(0, 50%, 0);
+	}
 
-	to {
+	100% {
 		opacity: 1;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);

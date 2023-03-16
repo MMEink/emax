@@ -18,7 +18,7 @@ export default function MediaView() {
     Aos.init();
   }, []);
   const block_section = services.find(
-    (s) => s.name === "Photography & Videos"
+    (s) => s.name === "Photography & Video"
   ).blocks;
   return (
     <HelmetProvider>
