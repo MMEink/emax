@@ -63,7 +63,7 @@ export default function ContactForm() {
           readOnly
         ></input>
         <div className="formTitleContainer">
-          <h3 className="zcwf_title">Contact Us Info</h3>
+          <h3 className="zcwf_title">Get in Touch!</h3>
         </div>
         <Form.Group className="mb-3 zcwf_row" controlId="NAME">
           <Form.Label className="zcwf_col_lab">
@@ -146,9 +146,9 @@ export default function ContactForm() {
             className="zcwf_col_fld_slt"
             height={"30px"}
             name="COBJ3CF9"
-            defaultValue={"Emax&#x20;Contact&#x20;Us&#x20;Form"}
+            defaultValue={"EM&#x20;Interactive&#x20;Contact&#x20;Us&#x20;Form"}
           >
-            <option value="Emax&#x20;Contact&#x20;Us&#x20;Form">
+            <option value="EM&#x20;Interactive&#x20;Contact&#x20;Us&#x20;Form">
               Emax Contact Us Form
             </option>
           </Form.Select>
